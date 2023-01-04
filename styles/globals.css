@@ -19,11 +19,23 @@ button:has(i):hover {
   background-color: #0253a3;
 }
 
+@font-face {
+  src: url("../assets/fonts/Roboto-Black.ttf");
+  font-family: Roboto;
+  font-weight: 700;
+}
+@font-face {
+  src: url("../assets/fonts/Roboto-Regular.ttf");
+  font-family: Roboto;
+  font-weight: 400;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Roboto;
+  font-weight: 400;
   overflow-x: hidden;
   background-color: rgb(245, 245, 245);
 }
@@ -67,8 +79,7 @@ section {
 
 .contents {
   width: 70%;
-  background-color: #cd691d!important;
-
+  background-color: #cd691d !important;
 }
 .contents_wrap p {
   margin: 20px 0;
@@ -101,5 +112,3 @@ section {
   gap: 20px;
   max-width: 400px;
 }
-
-

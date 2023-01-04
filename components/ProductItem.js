@@ -22,38 +22,36 @@ const ProductItem = ({ product }) => {
         <div className="flex justify-center h-[140px] py-5 py-2 sm:h-[250px]  lg:h-[310px] md:py-2 border border-t-0 border-x-0 border-b-[#e8e8e8] w-[90%] mx-auto">
           <Image
             src={product.img}
-            className="w-[100%] h-[100%]"
+            className="w-[85%] h-[120%] md:w-[400] md:h-[900]"
             alt="product"
-            width={400}
+            width={300}
             height={300}
           />
         </div>
       </Link>
-
-      <div className="py-5 px-3 rounded-md flex flex-col gap-1">
-        <p className="text-sm sm:text-xl text-red-600 text-center font-medium h-[40px] sm:h-[60px]md:h-[20px]">
+      <div className="py-5 px-3 rounded-md flex flex-col gap-1 text-center md:text-left md:w-[80%] mx-auto md:my-[60px]">
+        <p
+          className="text-base sm:text-xl text-[#757575] font-[15px] text-center md:text-left sm:h-[60px]md:h-[20px]"
+          style={{ lineHeight: "1" }}
+        >
           {product.title}
         </p>
-
-        <div className="flex flex-col text-center items-center gap-3 ">
-          <p className="font-bold text-base md:text-2xl">#{product.price}</p>
-          <div className="flex flex-wrap justify-center gap-3 items-center">
-            <p className="font-bold text-xs md:text-base">
-              <del>#{product.formerPrice}</del>
-            </p>
-            <p className="text-green-600 text-sm font-semibold">
-              %{product.discount} off
-            </p>
-          </div>
+        <p className="text-xs text-[#757575]">{product.description}</p>
+        <div className="flex flex-col text-center items-center md:flex-row">
+          <p className="font-bold text-base md:text-2xl text-[#ad0000] md:mr-4">
+            #{product.price}
+          </p>
+          <p className="font-bold text-xs md:text-base">
+            <del>#{product.formerPrice}</del>
+          </p>
         </div>
-
-        <div className="flex flex-wrap justify-center gap-1 text-xs md:text-lg items-center">
+        <div className="flex flex-wrap justify-center gap-1 text-xs md:text-lg items-center md:justify-start">
           <div className="flex justify-center bg-white ">
-            <AiFillStar fill="#26ACAD" />
-            <AiFillStar fill="#26ACAD" />
-            <AiFillStar fill="#26ACAD" />
-            <AiFillStar fill="#26ACAD" />
-            <AiFillStar fill="#26ACAD" />
+            <AiFillStar fill="#FED00B" />
+            <AiFillStar fill="#FED00B" />
+            <AiFillStar fill="#FED00B" />
+            <AiFillStar fill="#FED00B" />
+            <AiFillStar fill="#FED00B" />
           </div>
           <p className="text-sm">{product.reviews} reviews</p>
         </div>
