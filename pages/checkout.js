@@ -18,6 +18,7 @@ const Checkout = () => {
         state: "",
         phone: ""
     }
+
     const [formData, setformData] = useState(initialForm)
 
     const handleChange = (e) => {
@@ -32,20 +33,22 @@ const Checkout = () => {
 
     const { cart } = useContext(productContext)
 
-
-    const total = cart?.map((x) => x.price * +x?.item.slice(0,1))
+    const total = cart?.map((x) => x.price * +x?.item.slice(0, 1))
 
     const checkout = (e) => {
+        const { email, firstName, lastName, company, address, city, state,
+            phone } = formData
+
+        if (email === "" || firstName === "" || lastName === "" || company === "" || address === "" || city === "" || state === "" || phone === "") {
+            return;
+        }
+
         e.preventDefault()
-
         router.push("/success")
-
-        console.log(cart ,formData)
+        console.log(cart, formData)
     }
 
     const router = useRouter()
-
-    console.log(cart.map((c) => +c.item.slice(0,1)) , 'cart')
 
     useEffect(() => {
         if (cart.length === 0) {
@@ -58,35 +61,34 @@ const Checkout = () => {
         <>
             <section>
                 <div className='checkout flex flex-col-reverse py-5 max-w-lg w-[90%] mx-auto lg:flex-row lg:max-w-6xl lg:justify-between lg:gap-10 lg:items-start'>
-                    <form className='lg:w-[60%] lg:border-[#e6e6e6]  lg:border lg:border-y-0  lg:border-r-[#e8e8e8] lg:border-l-0 lg:pr-10'>
-              
+                    <form onSubmit={checkout} className='lg:w-[60%] lg:border-[#e6e6e6]  lg:border lg:border-y-0  lg:border-r-[#e8e8e8] lg:border-l-0 lg:pr-10'>
+
                         <div className="flex flex-col gap-5 mt-5">
                             <div>
                                 <h2 className='text-md'>contact information</h2>
                             </div>
                             <div className='input'>
                                 <label htmlFor="email"></label>
-                                <input type="text" onChange={(e) => handleChange(e)} name='email' value={formData.email} placeholder='Email' />
+                                <input required type="email" onChange={(e) => handleChange(e)} name='email' value={formData.email} placeholder='Email' />
                             </div>
                             <div className="input gap-5 flex flex-col md:flex-row">
-                                <input type="text" onChange={(e) => handleChange(e)} name='firstName' value={formData.firstName} placeholder='Firstname' />
+                                <input required type="text" onChange={(e) => handleChange(e)} name='firstName' value={formData.firstName} placeholder='Firstname' />
 
-                                <input type="text" onChange={(e) => handleChange(e)} name='lastName' value={formData.lastName} placeholder='Lastname' />
+                                <input required type="text" onChange={(e) => handleChange(e)} name='lastName' value={formData.lastName} placeholder='Lastname' />
                             </div>
                             <div className="input">
-                                <input type="text" onChange={(e) => handleChange(e)} placeholder='Company (Optional)' value={formData.company} name="company" />
+                                <input required type="text" onChange={(e) => handleChange(e)} placeholder='Company (Optional)' value={formData.company} name="company" />
                             </div>
                             <div className="input">
-                                <input type="text" onChange={(e) => handleChange(e)} placeholder='Address' value={formData.address} name="address" />
+                                <input required type="text" onChange={(e) => handleChange(e)} placeholder='Address' value={formData.address} name="address" />
                             </div>
                             <div className="input gap-5 flex flex-col md:flex-row">
-                                <input type="text" onChange={(e) => handleChange(e)} placeholder='City' value={formData.city} name="city" />
-                                <input type="text" onChange={(e) => handleChange(e)} placeholder='State' value={formData.state} name="state" />
+                                <input required type="text" onChange={(e) => handleChange(e)} placeholder='City' value={formData.city} name="city" />
+                                <input required type="text" onChange={(e) => handleChange(e)} placeholder='State' value={formData.state} name="state" />
                             </div>
                             <div className="input">
-                                <input type="text" onChange={(e) => handleChange(e)} placeholder='Phone' value={formData.phone} name="phone" />
+                                <input required type="number" onChange={(e) => handleChange(e)} placeholder='Phone' value={formData.phone} name="phone" />
                             </div>
-
                         </div>
 
                         <div className="flex my-5 font-medium justify-center text-center flex-col-reverse gap-5">
@@ -94,9 +96,9 @@ const Checkout = () => {
                                 <p><span className='text-[#0479b8]'>{"<"} </span> Back to product</p>
                             </Link>
 
-                                <button onClick={checkout} className='bg-[#0087d2] hover:bg-[#0371ac] rounded-md shadow-lg text-white p-5 w-full'>
-                                    Submit
-                                </button>
+                            <button onClick={checkout} type="submit" className='bg-[#0087d2] hover:bg-[#0371ac] rounded-md shadow-lg text-white p-5 w-full'>
+                                Submit
+                            </button>
 
                         </div>
                     </form>
