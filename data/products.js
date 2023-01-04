@@ -8,7 +8,7 @@ import productImg22 from "../assets/img/A6.png";
 import productImg6 from "../assets/img/BCG-35.png";
 import productImg7 from "../assets/img/Blood Sugar Normalizer.png";
 import productImg8 from "../assets/img/Boscure.png";
-import productImg9 from "../assets/img/B1.png";
+import productImg9 from "../assets/img/B11.png";
 import productImg10 from "../assets/img/Brahmi Shakti.png";
 import productImg11 from "../assets/img/Cardio-Vital.png";
 import productImg12 from "../assets/img/DiabeCare.png";
