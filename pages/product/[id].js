@@ -126,7 +126,7 @@ const ProductItem = () => {
                     checkCart?.inCart
                       ? "bg-gray-500 hover:bg-gray-600"
                       : "bg-[#103CC0]"
-                  } `}
+                  } btn`}
                 >
                   <AiOutlineShoppingCart className="inline mb-1 mr-1" />
                   {!checkCart?.inCart ? "Add To Cart" : "change cart"}
@@ -140,9 +140,10 @@ const ProductItem = () => {
             <strong>{product.contents?.head1}</strong>
           </h2>
           <div>
-            {product.contents?.text1.map((text, idx) => (
-              <p key={idx}>{text}</p>
-            ))}
+            {product?.contents?.text1 &&
+              product.contents?.text1.map((text, idx) => (
+                <p key={idx}>{text}</p>
+              ))}
           </div>
           <div
             className={` text-[white] p-4 md:p-8 text-center`}
@@ -170,130 +171,151 @@ const ProductItem = () => {
             {product.contents?.head3}
           </h2>
           <div className=" flex flex-col md:flex-row justify-between md:gap-8">
-            {product.contents?.list1.map((text, idx) => (
-              <p key={idx} className="flex md:flex-1">
-                <span style={{ color: "#FC8608" }}>
-                  {product.contents.listType}
-                </span>{" "}
-                {text}
-              </p>
-            ))}
+            {product?.contents?.list1 &&
+              product.contents?.list1.map((text, idx) => (
+                <p key={idx} className="flex md:flex-1">
+                  <span style={{ color: "#FC8608" }}>
+                    {product.contents.listType}
+                  </span>{" "}
+                  {text}
+                </p>
+              ))}
           </div>
           <div className=" my-14 flex flex-col md:flex-row md:gap-14 md:items-center">
-            {product.contents?.pricingTable.map((item, idx) => (
-              <div
-                key={idx}
-                className="text-left bg-[#EFEFEF] md:flex-1 mb-8 md:mb-0"
-                style={{ borderRadius: "20px" }}
-              >
-                {item.most && (
-                  <h2
-                    className={`bg-[#103CC0] text-[white] text-center py-4`}
-                    style={{
-                      borderTopLeftRadius: "30px",
-                      borderTopRightRadius: "30px",
-                      // background: product.colorTheme && product.colorTheme,
-                    }}
-                  >
-                    {item.most}
-                  </h2>
-                )}
-                <p className="text-center py-6">{item.plan}</p>
-                <div className="max-h-[300px]">
-                  <Image
-                    src={item.image}
-                    alt="product"
-                    width={100}
-                    height={100}
-                    layout="fill"
-                    priority
-                    className={`block  w-[90%] ${
-                      idx === 0 && "w-[55%]"
-                    } rounded-xl mx-auto max-h-full h-full ${
-                      product.id == 2 && idx === 1 && "w-[50%]"
-                    }`}
-                  />
-                </div>
-                <div className="w-[90%] md:w-[80%] mx-auto">
-                  <p
-                    className=" text-2xl md:text-[25px] font-semibold text-[#3C3C3C]"
-                    style={{ margin: "0", marginTop: "20px" }}
-                  >
-                    ₦{item.price} NGN
-                  </p>
-                  <p className="text-right m-0 py-0" style={{ margin: "0" }}>
-                    <span
-                      className=" bg-[#103CC0] text-[white] p-1 text-xs"
-                      style={{ borderRadius: "50px" }}
+            {product?.contents?.pricingTable &&
+              product.contents?.pricingTable.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="text-center bg-[#EFEFEF] md:flex-1 mb-8 md:mb-0"
+                  style={{ borderRadius: "20px" }}
+                >
+                  {item.most && (
+                    <h2
+                      className={`bg-[#2fa1f4] text-[white] text-center py-4`}
+                      style={{
+                        borderTopLeftRadius: "30px",
+                        borderTopRightRadius: "30px",
+                      }}
                     >
-                      {item.saved}
-                    </span>
-                  </p>
-
-                  <div className=" text-center text-gray-400 my-4">
-                    <span>Regular Price</span>
-                    <span className=" text-lg text-4xl md:text-[25px] block">
-                      <del>₦{item.prevPrice} NGN</del>
-                    </span>
+                      {item.most}
+                    </h2>
+                  )}
+                  <p className="text-center py-6">{item.plan}</p>
+                  <div className="max-h-[300px]">
+                    <Image
+                      src={item.image}
+                      alt="product"
+                      width={100}
+                      height={100}
+                      layout="fill"
+                      priority
+                      className={`block  w-[90%] ${
+                        idx === 0 && "w-[55%]"
+                      } rounded-xl mx-auto max-h-full h-full ${
+                        product.id == 2 && idx === 1 && "w-[50%]"
+                      } ${product.id == 7 && idx === 2 && "w-[50%]"}`}
+                    />
                   </div>
-                  <div className="my-4">
-                    <Link href="/checkout">
-                      <button
-                        onClick={() =>
-                          addToCart(item.price, item.plan, item.image)
-                        }
-                        className={` text-white w-full p-3 rounded-lg font-bold text-md md:text-lg md:flex-1  ${
-                          checkCart?.inCart
-                            ? "bg-gray-500 hover:bg-gray-600"
-                            : "bg-[#103CC0]"
-                        }`}
+                  <div className="w-[90%] md:w-[80%] mx-auto">
+                    <p
+                      className=" text-2xl md:text-[25px] font-semibold text-[#3C3C3C]"
+                      style={{ margin: "0", marginTop: "20px" }}
+                    >
+                      ₦{item.price} NGN
+                    </p>
+                    <p className="text-center m-0 py-0" style={{ margin: "0" }}>
+                      <span
+                        className=" bg-[#2fa1f4] text-[white] p-1 text-xs"
+                        style={{ borderRadius: "50px" }}
                       >
-                        <AiOutlineShoppingCart className="inline mb-1 mr-1" />
-                        {!checkCart?.inCart ? "Add To Cart" : "change cart"}
-                      </button>
-                    </Link>
+                        {item.saved}
+                      </span>
+                    </p>
+
+                    <div className=" text-center text-gray-400 my-4">
+                      <span>Regular Price</span>
+                      <span className=" text-lg text-4xl md:text-[25px] block">
+                        <del>₦{item.prevPrice} NGN</del>
+                      </span>
+                    </div>
+                    <div className="my-4">
+                      <Link href="/checkout">
+                        <button
+                          onClick={() =>
+                            addToCart(item.price, item.plan, item.image)
+                          }
+                          className={` text-white w-full p-3 rounded-lg font-bold text-md md:text-lg md:flex-1  ${
+                            checkCart?.inCart
+                              ? "bg-gray-500 hover:bg-gray-600"
+                              : "bg-[#103CC0]"
+                          } btn`}
+                        >
+                          <AiOutlineShoppingCart className="inline mb-1 mr-1" />
+                          {!checkCart?.inCart ? "Add To Cart" : "change cart"}
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
-          <div className="my-14 md:my-24 md:w-[80%] mx-auto">
-            {product.contents?.testimonies.map((testimony, idx) => (
-              <div
-                key={idx}
-                className="p-4"
-                style={{
-                  boxShadow: "1px 1px 10px 1px rgba(119, 119, 119,0.3)",
-                  borderRadius: "30px",
-                }}
-              >
-                <p>
-                  <span className="font-[700]"> {testimony.name}.</span>
-                  <span className="text-[#20B874] text-sm text-opacity-50">
-                    {" "}
-                    Verifield Buyer
-                  </span>
-                </p>
-                <p>
-                  <div>
-                    <span className="inline-flex">
-                      <AiFillStar fill="#FED00B" size={15} />
-                      <AiFillStar fill="#FED00B" size={15} />
-                      <AiFillStar fill="#FED00B" size={15} />
-                      <AiFillStar fill="#FED00B" size={15} />
-                      <AiFillStar fill="#FED00B" size={15} />
+          <div className="my-6 md:my-24 md:w-[80%] mx-auto">
+            {product?.contents?.testimonies &&
+              product.contents?.testimonies.map((testimony, idx) => (
+                <div
+                  key={idx}
+                  className="p-4"
+                  style={{
+                    boxShadow: "1px 1px 10px 1px rgba(119, 119, 119,0.3)",
+                    borderRadius: "30px",
+                  }}
+                >
+                  <p>
+                    <span className="font-[700]"> {testimony.name}.</span>
+                    <span className="text-[#20B874] text-sm text-opacity-50">
+                      {" "}
+                      Verifield Buyer
                     </span>
-                    <span className="text-base">
-                      <b>{testimony.title}</b>
-                    </span>
-                  </div>
-                </p>
-                <p className="text-base text-gray-400 ">
-                  {testimony.description}
-                </p>
-              </div>
-            ))}
+                  </p>
+                  <p>
+                    <div>
+                      <span className="inline-flex">
+                        <AiFillStar fill="#FED00B" size={15} />
+                        <AiFillStar fill="#FED00B" size={15} />
+                        <AiFillStar fill="#FED00B" size={15} />
+                        <AiFillStar fill="#FED00B" size={15} />
+                        <AiFillStar fill="#FED00B" size={15} />
+                      </span>
+                      <span className="text-base">
+                        <b>{testimony.title}</b>
+                      </span>
+                    </div>
+                  </p>
+                  <p className="text-base text-gray-400 ">
+                    {testimony.description}
+                  </p>
+                </div>
+              ))}
           </div>
+          {product?.shortpage && (
+            <div className="">
+              <Link href="/checkout">
+                <button
+                  onClick={() =>
+                    addToCart(product.price, "1 month plan", product.img)
+                  }
+                  className={` text-white w-full p-3 md:p-6 rounded-lg font-bold text-md md:text-lg md:flex-1  ${
+                    checkCart?.inCart
+                      ? "bg-gray-500 hover:bg-gray-600"
+                      : "bg-[#103CC0]"
+                  } btn`}
+                >
+                  <AiOutlineShoppingCart className="inline mb-1 mr-1" />
+                  {!checkCart?.inCart ? "Add To Cart" : "change cart"}
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       </main>
       <Footer />

@@ -21,7 +21,7 @@ const ProductItem = ({ product }) => {
         <div className="flex justify-center h-[140px] py-5 py-2 sm:h-[250px]  lg:h-[310px] md:py-2 border border-t-0 border-x-0 border-b-[#e8e8e8] w-[90%] mx-auto">
           <Image
             src={product.img}
-            className="w-[85%] h-[120%] md:w-[400] md:h-[900]"
+            className="w-[83%] h-[120%] md:w-[400] md:h-[900]"
             alt="product"
             width={300}
             height={300}
@@ -38,10 +38,10 @@ const ProductItem = ({ product }) => {
         <p className="text-xs text-[#757575]">{product.description}</p>
         <div className="flex flex-col text-center items-center md:flex-row">
           <p className="font-bold text-base md:text-2xl text-[#ad0000] md:mr-4">
-            #{product.price}
+            ₦{product.price}
           </p>
           <p className="font-bold text-xs md:text-base">
-            <del>#{product.formerPrice}</del>
+            <del>₦{product.formerPrice}</del>
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-1 text-xs md:text-lg items-center md:justify-start">
@@ -54,17 +54,6 @@ const ProductItem = ({ product }) => {
           </div>
           <p className="text-sm">{product.reviews} reviews</p>
         </div>
-
-        {/* <p className="text-white">{product.star}</p><AiFillStar /> */}
-
-        {/* <div className="mt-7">
-          <Link href={`product/${product.id}`} className="text-xs  sm:text-lg">
-            <button className={` text-white w-full p-2 rounded-md font-bold  md:flex-1 ${checkCart?.inCart ? "bg-gray-500 hover:bg-gray-600" : "bg-blue "}`}>
-              <AiOutlineShoppingCart className="inline mb-1 mr-1" />
-              <span>{checkCart?.inCart ? "in cart" : "Add To Cart"}</span>
-            </button>
-          </Link>
-        </div> */}
       </div>
     </main>
   );

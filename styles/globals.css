@@ -39,6 +39,25 @@ body {
   overflow-x: hidden;
   background-color: rgb(245, 245, 245);
 }
+.btn {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  outline: none;
+  margin: 20px 0;
+  padding: 20px 10px;
+  border-radius: 5px;
+  background-color: #2fa1f4;
+  border: none;
+  cursor: pointer;
+  -webkit-animation: scaling 2s infinite alternate;
+  animation: scaling 2s infinite alternate;
+  overflow: hidden;
+}
+.btn:hover {
+  background-color: #277dba;
+}
 input,
 button {
   outline: none;
@@ -88,12 +107,11 @@ section {
 .footer .list {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 0px;
   justify-content: space-between;
   width: 90%;
   margin: 20px auto 50px;
   color: white;
-  max-width: 1200px;
 }
 
 .footer .list h3 {

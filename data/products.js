@@ -23,6 +23,32 @@ import bo2 from "../assets/img/Bo2.png";
 import bo3 from "../assets/img/Bo3.png";
 import twoinone from "../assets/img/Blood Sugar Normalizer.png";
 import twoinone3 from "../assets/img/7.png";
+import arjunlas from "../assets/img/arlagrey.png";
+import arjunlas3 from "../assets/img/arjuplus3.png";
+import arjuna6 from "../assets/img/arjuna6.png";
+import arggrey1 from "../assets/img/arggrey1.png";
+import arggrey3 from "../assets/img/arggrey3.png";
+import arggrey6 from "../assets/img/arggrey6.png";
+import diacare1 from "../assets/img/diacareGrey.png";
+import diacare6 from "../assets/img/diacare6.png";
+import diacare2 from "../assets/img/diabcare2.png";
+import ultra3 from "../assets/img/ultra3.png";
+import ultra6 from "../assets/img/ultra6.png";
+import mpower from "../assets/img/mpower.png";
+import pros2 from "../assets/img/pros2.png";
+import pros1 from "../assets/img/pros1.png";
+import pros6 from "../assets/img/pros6.png";
+import fer1 from "../assets/img/fer1.png";
+import fer3 from "../assets/img/fer3.png";
+import fer6 from "../assets/img/fer6.png";
+import Arjno1 from "../assets/img/Arjno1.png";
+import Arjno3 from "../assets/img/Arjno3.png";
+import Arjno6 from "../assets/img/Arjno6.png";
+import card6 from "../assets/img/card6.png";
+import card1 from "../assets/img/card1.png";
+import card3 from "../assets/img/card3.png";
+import B11 from "../assets/img/Bo.png";
+import Cardio from "../assets/img/Cardio 3.png";
 
 export const staticProducts = [
   {
@@ -64,7 +90,7 @@ export const staticProducts = [
       pricingTable: [
         {
           id: 1,
-          image: productImg5,
+          image: arggrey1,
           price: "22,290.00",
           prevPrice: "49,550.00",
           plan: "One Month Plan",
@@ -72,7 +98,7 @@ export const staticProducts = [
         },
         {
           id: 3,
-          image: productImg22,
+          image: arggrey6,
           price: "73,300.00",
           prevPrice: "135,750.00",
           plan: "6 Months Super Pack",
@@ -81,7 +107,7 @@ export const staticProducts = [
         },
         {
           id: 2,
-          image: productImg21,
+          image: arggrey3,
           price: "52,350.00",
           prevPrice: "102,650.00",
           plan: "3 Bottles of Ashwagandha",
@@ -113,7 +139,7 @@ export const staticProducts = [
   },
   {
     id: 2,
-    img: productImg9,
+    img: B11,
     imgdouble: true,
     title: "BOSCURE- BONIAC",
     description: "Ultimate Bone Support Formula",
@@ -174,7 +200,7 @@ export const staticProducts = [
           image: bo2,
           price: "79,500.00",
           prevPrice: "155,880.00",
-          plan: "3 Bottles of Ashwagandha",
+          plan: "3 Bottles of Boscure-Boniac",
           saved: "(Save 51%)",
         },
       ],
@@ -209,7 +235,7 @@ export const staticProducts = [
     author: "Muscleblaze",
     star: 4.5,
     reviews: 568,
-    formerPrice: "49,500.00",
+    formerPrice: "110,000.00",
     price: "49,500.00",
     discount: 29,
     qtn: 1,
@@ -237,7 +263,7 @@ export const staticProducts = [
       pricingTable: [
         {
           id: 1,
-          image: twoinone,
+          image: diacare1,
           price: "49,550.00",
           prevPrice: "110,000.00",
           plan: "One Month Plan",
@@ -245,7 +271,7 @@ export const staticProducts = [
         },
         {
           id: 3,
-          image: twoinone3,
+          image: diacare6,
           price: "149,500.00",
           prevPrice: "276,850.00",
           plan: "6 Months Super Pack",
@@ -254,10 +280,10 @@ export const staticProducts = [
         },
         {
           id: 2,
-          image: twoinone,
+          image: diacare2,
           price: "79,500.00",
           prevPrice: "155,880.00",
-          plan: "3 Bottles of Ashwagandha",
+          plan: "3 Bottles of Diabetes 2-in-1",
           saved: "Save 51%",
         },
       ],
@@ -291,8 +317,8 @@ export const staticProducts = [
     description: "Maximum Sexual Performance",
     star: 4.5,
     reviews: 568,
-    formerPrice: "49,550.00",
-    price: "22,500.00",
+    formerPrice: "110,550.00",
+    price: "49,500.00",
     discount: 29,
     qtn: 1,
     contents: {
@@ -318,7 +344,7 @@ export const staticProducts = [
       pricingTable: [
         {
           id: 1,
-          image: twoinone,
+          image: mpower,
           price: "49,550.00",
           prevPrice: "110,000.00",
           plan: "One Month Plan",
@@ -326,7 +352,7 @@ export const staticProducts = [
         },
         {
           id: 3,
-          image: twoinone3,
+          image: ultra6,
           price: "149,500.00",
           prevPrice: "276,850.00",
           plan: "6 Months Super Pack",
@@ -335,10 +361,10 @@ export const staticProducts = [
         },
         {
           id: 2,
-          image: twoinone,
+          image: ultra3,
           price: "79,500.00",
           prevPrice: "155,880.00",
-          plan: "3 Bottles of Ashwagandha",
+          plan: "3 Bottles of M-Power Ultra & Alpha Enforcer",
           saved: "Save 51%",
         },
       ],
@@ -365,6 +391,7 @@ export const staticProducts = [
       ],
     },
   },
+
   {
     id: 15,
     img: arj1,
@@ -372,7 +399,7 @@ export const staticProducts = [
     description: "Healthy Heart Supplement",
     star: 4.5,
     reviews: 568,
-    formerPrice: "49,550.00",
+    formerPrice: "110,000.00",
     price: "49,500.00",
     discount: 29,
     qtn: 1,
@@ -402,7 +429,7 @@ export const staticProducts = [
       pricingTable: [
         {
           id: 1,
-          image: twoinone,
+          image: arjunlas,
           price: "49,550.00",
           prevPrice: "110,000.00",
           plan: "One Month Plan",
@@ -410,7 +437,7 @@ export const staticProducts = [
         },
         {
           id: 3,
-          image: twoinone3,
+          image: arjuna6,
           price: "149,500.00",
           prevPrice: "276,850.00",
           plan: "6 Months Super Pack",
@@ -419,10 +446,10 @@ export const staticProducts = [
         },
         {
           id: 2,
-          image: twoinone,
+          image: arjunlas3,
           price: "79,500.00",
           prevPrice: "155,880.00",
-          plan: "3 Bottles of Ashwagandha",
+          plan: "3 Bottles of Arjuna-Lasuna",
           saved: "Save 51%",
         },
       ],
@@ -452,8 +479,8 @@ export const staticProducts = [
     author: "Muscleblaze",
     star: 4.5,
     reviews: 568,
-    formerPrice: "49,550.00",
-    price: "49,500.00",
+    formerPrice: "50,000.00",
+    price: "22,500.00",
     discount: 29,
     qtn: 1,
     contents: {
@@ -480,27 +507,27 @@ export const staticProducts = [
       pricingTable: [
         {
           id: 1,
-          image: twoinone,
-          price: "49,550.00",
-          prevPrice: "110,000.00",
+          image: pros1,
+          price: "22,500.00",
+          prevPrice: "50,000.00",
           plan: "One Month Plan",
           saved: "Save 45%",
         },
         {
           id: 3,
-          image: twoinone3,
-          price: "149,500.00",
-          prevPrice: "276,850.00",
+          image: pros6,
+          price: "74,500.00",
+          prevPrice: "137,970.00",
           plan: "6 Months Super Pack",
           saved: "Save 54%",
           most: "MOST POPULAR",
         },
         {
           id: 2,
-          image: twoinone,
-          price: "79,500.00",
-          prevPrice: "155,880.00",
-          plan: "3 Bottles of Ashwagandha",
+          image: pros2,
+          price: "53,500.00",
+          prevPrice: "104,900.00",
+          plan: "3 Bottles of Prostopan",
           saved: "Save 51%",
         },
       ],
@@ -536,7 +563,7 @@ export const staticProducts = [
     star: 4.5,
     reviews: 568,
     formerPrice: "49,500.00",
-    price: "49,500.00",
+    price: "20,500.00",
     discount: 29,
     qtn: 1,
     colorTheme: "#B17E05",
@@ -565,26 +592,26 @@ export const staticProducts = [
       pricingTable: [
         {
           id: 1,
-          image: twoinone,
-          price: "49,550.00",
-          prevPrice: "110,000.00",
+          image: fer1,
+          price: "20,500.00",
+          prevPrice: "49,550.00",
           plan: "One Month Plan",
           saved: "Save 45%",
         },
         {
           id: 3,
-          image: twoinone3,
-          price: "149,500.00",
-          prevPrice: "276,850.00",
+          image: fer6,
+          price: "72,100.00",
+          prevPrice: "133,519.00",
           plan: "6 Months Super Pack",
           saved: "Save 54%",
           most: "MOST POPULAR",
         },
         {
           id: 2,
-          image: twoinone,
-          price: "79,500.00",
-          prevPrice: "155,880.00",
+          image: fer3,
+          price: "55,500.00",
+          prevPrice: "108,824.00",
           plan: "3 Bottles of Ashwagandha",
           saved: "Save 51%",
         },
@@ -616,12 +643,12 @@ export const staticProducts = [
     id: 3,
     img: productImg3,
     title: "AJUNOLIVE",
-    description: "Female Fertility, Fibroid Cleanser",
+    description: "Formulated Blood Pressure Remedy",
     author: "Muscleblaze",
     star: 4.5,
     reviews: 568,
-    formerPrice: "49,500.00",
-    price: "49,500.00",
+    formerPrice: "50,444.00",
+    price: "22,700.00",
     discount: 29,
     qtn: 1,
     colorTheme: "#B17E05",
@@ -652,27 +679,27 @@ export const staticProducts = [
       pricingTable: [
         {
           id: 1,
-          image: twoinone,
-          price: "49,550.00",
-          prevPrice: "110,000.00",
+          image: Arjno1,
+          price: "22,700.00",
+          prevPrice: "50,444.00",
           plan: "One Month Plan",
           saved: "Save 45%",
         },
         {
           id: 3,
-          image: twoinone3,
-          price: "149,500.00",
-          prevPrice: "276,850.00",
+          image: Arjno6,
+          price: "75,200.00",
+          prevPrice: "139,259.00",
           plan: "6 Months Super Pack",
           saved: "Save 54%",
           most: "MOST POPULAR",
         },
         {
           id: 2,
-          image: twoinone,
-          price: "79,500.00",
-          prevPrice: "155,880.00",
-          plan: "3 Bottles of Ashwagandha",
+          image: Arjno3,
+          price: "54,500.00",
+          prevPrice: "106,863.00",
+          plan: "3 Bottles of Arjunolive",
           saved: "Save 51%",
         },
       ],
@@ -707,8 +734,8 @@ export const staticProducts = [
     author: "Muscleblaze",
     star: 4.5,
     reviews: 568,
-    formerPrice: "49,500.00",
-    price: "49,500.00",
+    formerPrice: "52,200.00",
+    price: "23,500.00",
     discount: 29,
     qtn: 1,
     contents: {
@@ -737,27 +764,27 @@ export const staticProducts = [
       pricingTable: [
         {
           id: 1,
-          image: twoinone,
-          price: "49,550.00",
-          prevPrice: "110,000.00",
+          image: card1,
+          price: "23,500.00",
+          prevPrice: "52,200.00",
           plan: "One Month Plan",
           saved: "Save 45%",
         },
         {
           id: 3,
-          image: twoinone3,
-          price: "149,500.00",
-          prevPrice: "276,850.00",
+          image: card6,
+          price: "74,500.00",
+          prevPrice: "137,962.00",
           plan: "6 Months Super Pack",
           saved: "Save 54%",
           most: "MOST POPULAR",
         },
         {
           id: 2,
-          image: twoinone,
-          price: "79,500.00",
-          prevPrice: "155,880.00",
-          plan: "3 Bottles of Ashwagandha",
+          image: Cardio,
+          price: "52,300.00",
+          prevPrice: "102,550.00",
+          plan: "3 Bottles of Cardio-Vital",
           saved: "Save 51%",
         },
       ],
@@ -778,89 +805,118 @@ export const staticProducts = [
       ],
     },
   },
+  {
+    id: 10,
+    img: productImg10,
+    title: "BRAHMI SHAKTI",
+    description: "Powerful Ayurvedic High Blood Pressure Formula",
+    author: "Muscleblaze",
+    star: 4.5,
+    reviews: 568,
+    formerPrice: "52,200.00",
+    price: "23,500.00",
+    discount: 29,
+    qtn: 1,
+    shortpage: true,
+    contents: {
+      head2:
+        "REVERSE YOUR HIGH BLOOD PRESSURE AND GET YOUR HEART WORKING PERFECTLY",
+      text2: [
+        "",
+        "Brahmi is a 100% natural & effective formulated ayurvedic medicine that lowers high blood pressure, tightens blood vessels so blood can freely move around, and melts away any blood clots to avoid complications associated with hypertension.",
+        "Brahmi, a staple plant in traditional Ayurvedic medicine; ",
+      ],
+      listType: "✓",
+      list1: [
+        "Helps In Improving Memory",
+        " Reducing Anxiety",
+        "Boost Brain Function And Alleviate Anxiety.",
+        "Contains Powerful Antioxidants And Reduces Inflammation",
+      ],
+    },
+  },
 
   {
     id: 6,
     img: productImg6,
     title: "BCG-35",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus!",
+    description: "Natural Blood Sugar Balancer",
     author: "Muscleblaze",
     star: 4.5,
     reviews: 568,
-    formerPrice: 4000,
-    price: 3499,
+    formerPrice: "54,000.00",
+    price: "24,300.00",
     discount: 29,
     qtn: 1,
+    shortpage: true,
+    contents: {
+      head2: "Helps In Effective Regulation Of Glucose (Sugar) In The Blood",
+      text2: [
+        "",
+        "BCG-35 contains antioxidant properties that drastically reduce blood glucose which is the same as blood sugar. Its natural herbal ingredients repair cells in the body, relax the nerves and help in the regulation of glucose in the blood.",
+        "BCG-35 reverses high blood sugar naturally and prevents the body from: Sudden heart attack, High cholesterol, Developing neuropathy, And possible amputation of limbs.",
+        "BCG-35 helps the body adequately absorb blood sugar and in turn prevent it from other fatal illnesses.",
+      ],
+    },
   },
   {
     id: 9,
     img: productImg2,
     title: "ArjunaPlus",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus!",
+    description: "Blood Pressure Support Formula",
     author: "Muscleblaze",
     star: 4.5,
     reviews: 568,
-    formerPrice: 4000,
-    price: 3499,
+    formerPrice: "46,000.00",
+    price: "20,700.00",
     discount: 29,
     qtn: 1,
+    shortpage: true,
+    contents: {
+      head2: "REGULATE BLOOD CIRCULATION AND PROMOTE HEALTHY HEART",
+      text2: [
+        "",
+        "Arjuna Plus, from the extracts Ayurvedic medicine, helps in cleansing and nourishes the blood circulatory system in a bid to lower high blood pressure levels and boost a healthy heart health.",
+        "Himalaya Arjuna contains herbal extracts from the bark of Arjuna.",
+        "The extracts of Arjuna are effective in the treatment of: Cardiovascular ailments,  Treating asthma, Controlling hypertension, And preventing kidney stones.",
+        "Rich in antioxidant properties, the Himalaya Arjuna promotes blood circulation and heals wounds. It does all these without any side effects.",
+      ],
+      listType: "✓",
+      list1: [
+        "Reverse Even The Most Acute Hypertension",
+        "Get Rid Of Constant Body Weakness ",
+        "Get Stable Blood Pressure Reading",
+        "Avoid The Risk Of Stroke and Heart Attack ",
+      ],
+    },
   },
-  {
-    id: 10,
-    img: productImg10,
-    title: "Brahmi Shakti",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus!",
-    author: "Muscleblaze",
-    star: 4.5,
-    reviews: 568,
-    formerPrice: 4000,
-    price: 3499,
-    discount: 29,
-    qtn: 1,
-  },
-  {
-    id: 11,
-    img: productImg11,
-    title: "Cardio-Vital",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus!",
-    author: "Muscleblaze",
-    star: 4.5,
-    reviews: 568,
-    formerPrice: 4000,
-    price: 3499,
-    discount: 29,
-    qtn: 1,
-  },
-  {
-    id: 12,
-    img: productImg12,
-    title: "DiabeCare",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus!",
-    author: "Muscleblaze",
-    star: 4.5,
-    reviews: 568,
-    formerPrice: 4000,
-    price: 3499,
-    discount: 29,
-    qtn: 1,
-  },
+
   {
     id: 16,
     img: productImg19,
-    title: "Madhuhara",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus!",
+    title: "MADHUHARA",
+    description: "Formulated Blood Sugar Supplement",
     author: "Muscleblaze",
     star: 4.5,
     reviews: 568,
-    formerPrice: 4000,
-    price: 3499,
+    formerPrice: "50,000.00",
+    price: "22,500.00",
     discount: 29,
     qtn: 1,
+    shortpage: true,
+    contents: {
+      head2: "Regulate Blood Sugar Levels In The Body Naturally",
+      text2: [
+        "",
+        "Madhuhara, made from powerful natural ingredients, is highly effective in the reversal of diabetes, regulation of blood sugar levels and also the normalization of cholesterol levels in the body system.",
+        "Its ingredients also increase of the level of HDL-Cholesterol (good Cholesterol) and reduce the level of LDL-Cholesterol (Bad Cholesterol) thereby effectively regulating the production of insulin in the body which in turn lower high blood sugar",
+      ],
+      listType: "✓",
+      list1: [
+        " Reverse Diabetes",
+        "Lose Weight, And Look Younger",
+        "No Side Effects. 100% Natural Ingredients",
+      ],
+    },
   },
 ];
