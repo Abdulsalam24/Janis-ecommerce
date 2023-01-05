@@ -23,9 +23,12 @@ const Nav = () => {
   return (
     <nav className="w-full bg-white shadow-md fixed top-0">
       <div className="relative w-[90%] mx-auto flex justify-between max-w-[1300px] z-1">
-        <div className="w-full py-4 flex justify-between items-center">
+        <div className="w-full py-6 flex justify-between items-center">
           <div>
-            <Image src={logo} alt="product" width={100} />
+            <Link href="/">
+              <Image src={logo} alt="product" width={400} className="w-[120%]" />
+            </Link>
+           
           </div>
 
           <div className="flex flex-1 items-center justify-end gap-3 md:w-[10%]">

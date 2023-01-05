@@ -7,7 +7,6 @@ import productContext from "../context/productContext";
 
 export const convertString = (str) => {
   let number = str;
-
   return `${number?.toLocaleString()}.00`;
 };
 
