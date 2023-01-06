@@ -66,65 +66,100 @@ const ProductItem = () => {
   }
 
   return (
-    <div className="bg-[#F5F5F5] mt-24 ">
+    <div className="bg-[#fff] mt-24 ">
       <Nav />
-      <main className="w-full my-10 mx-auto max-w-[400px] md:max-w-[1200px]">
-        <div className="btn pl-5">
-          <Link href="/">
-            <button className="flex gap-1 items-center py-3 px-3 mb-4 rounded-md bg-[#8c8c8c] text-white">
-              <AiOutlineArrowLeft /> <span>Back</span>
-            </button>
-          </Link>
-        </div>
-        <div className="text-center">
-          <p
-            className="my-2 text-4xl lg:text-6xl font-semibold"
-            style={{ color: product?.colorTitle }}
-          >
-            {product.title}
-          </p>
-          <p
-            className="my-2 text-md md:text-xl font-medium"
-            style={{ color: product?.colorDesc }}
-          >
-            {product.description}
-          </p>
-          <div className="md:w-[50%] bg-[#f8f8f8] shadow-sm mx-auto max-w-xl flex justify-center">
+      <main className="w-full my-10 mx-auto ">
+        <div className="flex flex-col md:flex-row items-center md:w-[80%] w-[90%] mx-auto">
+          <div className="text-center block md:hidden">
+            <p
+              className=" my-2 text-4xl md:text-[55px] font-semibold "
+              style={{ color: `${product.colorTheme || "#3C3C3C"}` }}
+            >
+              {product.title}
+            </p>
+            <p className="my-2 text-md md:text-xl font-medium">
+              {product.description}
+            </p>
+          </div>
+          <div className="shadow-sm w-full  md:w-[50%] text-center">
             <Image
               src={product.img}
               alt="product"
               width={100}
               height={100}
               layout="fill"
-              priority
-              className="block my-20 w-[400px] md:rounded-xl"
+              className="w-[60%] md:w-[50%] mx-auto"
             />
           </div>
-          <div className="flex flex-col items-center gap-2 ">
-            <p className="font-bold ">
-              <span className="text-4xl text-[#818191]">₦{product.price}</span>
-            </p>
-            <span className="text-gray-400 text-base">
-              <del>₦{product.formerPrice}</del>
-            </span>
+          <div className="h flex flex-col w-full md:w-[50%] py-5 px-3">
+            <div className="hidden md:block">
+              <p
+                className=" my-2 text-4xl md:text-[55px] font-semibold text-[#3C3C3C] leading-[40px] md:leading-[60px]"
+                style={{ color: `${product.colorTheme || "#3C3C3C"}` }}
+              >
+                {product.title}
+              </p>
+              <p className="my-2 text-md md:text-xl font-medium">
+                {product.description}
+              </p>
+            </div>
+            <div
+              className="flex flex-col gap-2 p-6 pl-6 rounded-1 my-4 text-center"
+              style={{ boxShadow: "1px 1px 10px 1px rgba(119, 119, 119,0.3)" }}
+            >
+              <p className="">
+                <span className="text-4xl text-[#818191] md:text-[45px]">
+                  ₦{product.price}
+                </span>
+              </p>
+              <span className="text-gray-400 text-lg">
+                <del>₦{product.formerPrice}</del>
+              </span>
+            </div>
+            <div className="">
+              <Link href="/checkout">
+                <button
+                  onClick={() =>
+                    addToCart(product.price, "1 month plan", product.img)
+                  }
+                  className={` text-white w-full p-3 md:p-6 rounded-lg font-bold text-md md:text-lg md:flex-1  ${
+                    checkCart?.inCart
+                      ? "bg-gray-500 hover:bg-gray-600"
+                      : "bg-[#103CC0]"
+                  } btn`}
+                >
+                  <AiOutlineShoppingCart className="inline mb-1 mr-1" />
+                  {!checkCart?.inCart ? "Add To Cart" : "change cart"}
+                </button>
+              </Link>
+            </div>
           </div>
-          <div className="flex flex-col gap-2 md:w-[50%] py-5 px-3"></div>
         </div>
-        <div className="contents_wrap  w-[90%] md:w-[70%] mx-auto">
-          <h2 className="text-center my-4 text-2xl font-semibold">
+        <div className="contents_wrap  w-[90%] md:w-[70%] mx-auto text-base md:text-xl">
+          <h2 className="text-center my-4 md:my-8 md:mt-16 text-2xl md:text-5xl font-semibold">
             <strong>{product.contents?.head1}</strong>
           </h2>
           <div>
-            {product.contents?.text1.map((text, idx) => (
-              <p key={idx}>{text}</p>
-            ))}
+            {product?.contents?.text1 &&
+              product.contents?.text1.map((text, idx) => (
+                <p key={idx}>{text}</p>
+              ))}
           </div>
-          <h2
-            style={{ color: product?.colorTitle }}
-            className="my-6 text-2xl font-semibold"
+          <div
+            className={` text-[white] p-4 md:p-8 text-center`}
+            style={{
+              borderTopLeftRadius: "30px",
+              borderTopRightRadius: "30px",
+              background: product.colorTheme || "green",
+            }}
           >
-            {product.contents?.head2}
-          </h2>
+            <h2
+              // style={{ color: product?.colorTitle }}
+              className="my-6 text-2xl font-semibold"
+            >
+              {product.contents?.head2}
+            </h2>
+          </div>
           <div>
             {product.contents?.text2.map((text, idx) => (
               <p key={idx} className={`${idx == 0 && "font-semibold"}`}>
@@ -132,69 +167,155 @@ const ProductItem = () => {
               </p>
             ))}
           </div>
-          <h2 className="my-4 text-2xl font-semibold">
+          <h2 className="my-4 text-2xl font-semibold text-center md:my-8">
             {product.contents?.head3}
           </h2>
-          <div>
-            {product.contents?.list1.map((text, idx) => (
-              <p key={idx}>
-                <span style={{ color: product.colorList }}>
-                  {product.contents.listType}
-                </span>
-                {text}
-              </p>
-            ))}
-          </div>
-
-          <h1 className="mt-8 text-center">Pricing Table</h1>
-          <div className="my-8 flex flex-col md:flex-row gap-2">
-            {product.contents?.pricingTable.map((item, idx) => (
-              <div key={idx} className="text-center">
-                <p>{item.plan}</p>
-                <Image
-                  src={item.image}
-                  alt="product"
-                  width={100}
-                  height={100}
-                  layout="fill"
-                  priority
-                  className="block my-20 w-[400px] md:rounded-xl"
-                />
-                {item.most && <h2>{item.most}</h2>}
-                <h3>₦{item.price}</h3>
-                <p>Regular Price</p>
-                <p>
-                  <del>₦{item.prevPrice}</del>
+          <div className=" flex flex-col md:flex-row justify-between md:gap-8">
+            {product?.contents?.list1 &&
+              product.contents?.list1.map((text, idx) => (
+                <p key={idx} className="flex md:flex-1">
+                  <span style={{ color: "#FC8608" }}>
+                    {product.contents.listType}
+                  </span>{" "}
+                  {text}
                 </p>
-                <p>{item.saved}</p>
-                <div className="">
-                  <Link href="/checkout">
-                    <button
-                      onClick={() => addToCart(item.price)}
-                      className={` text-white w-full p-3 rounded-lg font-bold text-md md:text-lg md:flex-1  ${
-                        checkCart?.inCart
-                          ? "bg-gray-500 hover:bg-gray-600"
-                          : "bg-blue"
-                      }`}
+              ))}
+          </div>
+          <div className=" my-14 flex flex-col md:flex-row md:gap-14 md:items-center">
+            {product?.contents?.pricingTable &&
+              product.contents?.pricingTable.map((item, idx) => (
+                <div
+                  key={idx}
+                  className="text-center bg-[#EFEFEF] md:flex-1 mb-8 md:mb-0"
+                  style={{ borderRadius: "20px" }}
+                >
+                  {item.most && (
+                    <h2
+                      className={`bg-[#2fa1f4] text-[white] text-center py-4`}
+                      style={{
+                        borderTopLeftRadius: "30px",
+                        borderTopRightRadius: "30px",
+                      }}
                     >
-                      <AiOutlineShoppingCart className="inline mb-1 mr-1" />
-                      {!checkCart?.inCart ? "Add To Cart" : "change cart"}
-                    </button>
-                  </Link>
+                      {item.most}
+                    </h2>
+                  )}
+                  <p className="text-center py-6">{item.plan}</p>
+                  <div className="max-h-[300px]">
+                    <Image
+                      src={item.image}
+                      alt="product"
+                      width={100}
+                      height={100}
+                      layout="fill"
+                      priority
+                      className={`block  w-[90%] ${
+                        idx === 0 && "w-[55%]"
+                      } rounded-xl mx-auto max-h-full h-full ${
+                        product.id == 2 && idx === 1 && "w-[50%]"
+                      } ${product.id == 7 && idx === 2 && "w-[50%]"}`}
+                    />
+                  </div>
+                  <div className="w-[90%] md:w-[80%] mx-auto">
+                    <p
+                      className=" text-2xl md:text-[25px] font-semibold text-[#3C3C3C]"
+                      style={{ margin: "0", marginTop: "20px" }}
+                    >
+                      ₦{item.price} NGN
+                    </p>
+                    <p className="text-center m-0 py-0" style={{ margin: "0" }}>
+                      <span
+                        className=" bg-[#2fa1f4] text-[white] p-1 text-xs"
+                        style={{ borderRadius: "50px" }}
+                      >
+                        {item.saved}
+                      </span>
+                    </p>
+
+                    <div className=" text-center text-gray-400 my-4">
+                      <span>Regular Price</span>
+                      <span className=" text-lg text-4xl md:text-[25px] block">
+                        <del>₦{item.prevPrice} NGN</del>
+                      </span>
+                    </div>
+                    <div className="my-4">
+                      <Link href="/checkout">
+                        <button
+                          onClick={() =>
+                            addToCart(item.price, item.plan, item.image)
+                          }
+                          className={` text-white w-full p-3 rounded-lg font-bold text-md md:text-lg md:flex-1  ${
+                            checkCart?.inCart
+                              ? "bg-gray-500 hover:bg-gray-600"
+                              : "bg-[#103CC0]"
+                          } btn`}
+                        >
+                          <AiOutlineShoppingCart className="inline mb-1 mr-1" />
+                          {!checkCart?.inCart ? "Add To Cart" : "change cart"}
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
-          <div className="my-12">
-            {product.contents?.testimonies.map((testimony, idx) => (
-              <div key={idx}>
-                <p>
-                  {testimony.name} <br /> *****{testimony.title}
-                </p>
-                <p>{testimony.description}</p>
-              </div>
-            ))}
+          <div className="my-6 md:my-24 md:w-[80%] mx-auto">
+            {product?.contents?.testimonies &&
+              product.contents?.testimonies.map((testimony, idx) => (
+                <div
+                  key={idx}
+                  className="p-4"
+                  style={{
+                    boxShadow: "1px 1px 10px 1px rgba(119, 119, 119,0.3)",
+                    borderRadius: "30px",
+                  }}
+                >
+                  <p>
+                    <span className="font-[700]"> {testimony.name}.</span>
+                    <span className="text-[#20B874] text-sm text-opacity-50">
+                      {" "}
+                      Verifield Buyer
+                    </span>
+                  </p>
+                  <p>
+                    <div>
+                      <span className="inline-flex">
+                        <AiFillStar fill="#FED00B" size={15} />
+                        <AiFillStar fill="#FED00B" size={15} />
+                        <AiFillStar fill="#FED00B" size={15} />
+                        <AiFillStar fill="#FED00B" size={15} />
+                        <AiFillStar fill="#FED00B" size={15} />
+                      </span>
+                      <span className="text-base">
+                        <b>{testimony.title}</b>
+                      </span>
+                    </div>
+                  </p>
+                  <p className="text-base text-gray-400 ">
+                    {testimony.description}
+                  </p>
+                </div>
+              ))}
           </div>
+          {product?.shortpage && (
+            <div className="">
+              <Link href="/checkout">
+                <button
+                  onClick={() =>
+                    addToCart(product.price, "1 month plan", product.img)
+                  }
+                  className={` text-white w-full p-3 md:p-6 rounded-lg font-bold text-md md:text-lg md:flex-1  ${
+                    checkCart?.inCart
+                      ? "bg-gray-500 hover:bg-gray-600"
+                      : "bg-[#103CC0]"
+                  } btn`}
+                >
+                  <AiOutlineShoppingCart className="inline mb-1 mr-1" />
+                  {!checkCart?.inCart ? "Add To Cart" : "change cart"}
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       </main>
       <Footer />
