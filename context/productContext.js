@@ -9,12 +9,19 @@ export const ProductContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [product, setProduct] = useState({});
   const [cart, setCart] = useState([]);
+  const [sortBy, setsortBy] = useState("");
 
   const addToCart = (price, plan, img) => {
     const exist = cart?.find((x) => x.id === product.id);
     if (exist) {
       setCart([
-        { ...product, inCart: true, selectedPrice: price, selectedPlan: plan, selectedImg:img },
+        {
+          ...product,
+          inCart: true,
+          selectedPrice: price,
+          selectedPlan: plan,
+          selectedImg: img,
+        },
       ]);
       return;
     }
@@ -31,9 +38,15 @@ export const ProductContextProvider = ({ children }) => {
   };
 
   const getProduct = (id) => {
+    sorProduct();
+    setsortBy("allProduct");
     setProducts(staticProducts);
     const filteredProduct = products.filter((x) => x.id == id);
     setProduct(filteredProduct[0]);
+  };
+  
+  const sorProduct = (prod) => {
+    setsortBy(prod);
   };
 
   const quantityChange = (type, id) => {
@@ -77,6 +90,8 @@ export const ProductContextProvider = ({ children }) => {
         quantityChange,
         addToCart,
         getProduct,
+        sorProduct,
+        sortBy,
       }}
     >
       {children}

@@ -67,6 +67,10 @@ export const staticProducts = [
     colorDesc: "#0D3F82",
     colorList: "#FC8608",
     colorTheme: "#2D6516",
+    topProduct: 3,
+    allProduct: 1,
+
+    bottle1: true,
     contents: {
       head1: "EXPERIENCE LOWER BLOOD PRESSURE LEVEL",
       text1: [
@@ -138,6 +142,92 @@ export const staticProducts = [
     },
   },
   {
+    id: 17,
+    img: productImg20,
+    title: "PROSTOPAN",
+    description: "Prostate Health Formula",
+    author: "Muscleblaze",
+    star: 4.5,
+    reviews: 568,
+    formerPrice: "50,000.00",
+    price: "22,500.00",
+    discount: 29,
+    qtn: 1,
+    bottle1: true,
+    topProduct: 5,
+    allProduct: 2,
+
+    contents: {
+      head1: "Have A Healthy Prostate. Clean Your Glands",
+      text1: [
+        "Prostopan contains a nettle root extract that helps increase the formation of urine, clear the impurities from fat, blood and muscles, clean the glands and re-establish the intelligence of the glands so that they can return to their normal size, and maintain regular prostate functions",
+      ],
+      head2:
+        "ENABLES THE FREE FLOW OF URINE. COOLING THE MEMBRANES OF THE URINARY TRACT.",
+      text2: [
+        "“​Today, many people use Prostopan to treat urinary problems during the early stages of an enlarged prostate”",
+        "Prostopan relieves problems in urination owing to swelling of the prostate. Its natural extracts treat chronic urinary infection and urinary electrolyte excretion.",
+        "Nettle root extract, one of the active ingredients, contains compounds that bind to sex hormone binding globulin, leading to increased levels of free testosterone for improved sexual health, performance, and easier muscle building.",
+      ],
+      head3: "PROMOTE HEALTHY PROSTATE HEALTH",
+      listType: "✓",
+      list1: [
+        "Fight Tumors And Suppress Pain.",
+        "Helps The Free Flow Of Urine By Cooling And Soothing The Membranes Of The Urinary Tract.",
+        "Breaks Up The Large Renal And Ureteric Stones Into Small Particles And Then Flushes Out",
+        " No Side Effects. No Harms To The Kidneys Or Other Vital Organs",
+      ],
+      pricingTable: [
+        {
+          id: 1,
+          image: pros1,
+          price: "22,500.00",
+          prevPrice: "50,000.00",
+          plan: "One Month Plan",
+          saved: "Save 45%",
+        },
+        {
+          id: 3,
+          image: pros6,
+          price: "74,500.00",
+          prevPrice: "137,970.00",
+          plan: "6 Months Super Pack",
+          saved: "Save 54%",
+          most: "MOST POPULAR",
+        },
+        {
+          id: 2,
+          image: pros2,
+          price: "53,500.00",
+          prevPrice: "104,900.00",
+          plan: "3 Bottles of Prostopan",
+          saved: "Save 51%",
+        },
+      ],
+      reviewsImg: "",
+      testimonies: [
+        {
+          name: "Mrs. Francisca",
+          title: "This is amazing!",
+          description:
+            "I got my knee damaged after an accident some years ago and I have been on painkillers, balms, creams, and knee support. The pains were getting more intense by the day. Then, I heard about Boscure & Boniac. I got it and tried it, and I must say this is the first time I've experienced true relief in my years of struggle. There are no headaches, flare-ups or any side effects. It’s amazing. ",
+        },
+        {
+          name: "Kunle Ore",
+          title: "I felt relief after all these years!",
+          description:
+            "This product has changed my life. I can walk for a mile without even thinking about the pain. I no longer dread waking up to pain because it's not there anymore. Even my doctor asked me to share what I’m using with him. You won’t regret this too.",
+        },
+        {
+          name: "Tamira Kazim",
+          title: "Get it too!",
+          description:
+            "I can now sit for hours without getting knee stiff and pains. I have tried lots of supplements to heal and take away the pain but never really gotten the results I was looking for. It was very difficult to walk. Going up and down the stairs was almost impossible because of the pains. After just three weeks of Boscure & Boniac, the pain has greatly reduced and I walk around much easier.",
+        },
+      ],
+    },
+  },
+  {
     id: 2,
     img: B11,
     imgdouble: true,
@@ -154,6 +244,9 @@ export const staticProducts = [
     colorDesc: "#860002",
     colorList: "#FC8608",
     colorTheme: "#103CC0",
+    topProduct: 10,
+    allProduct: 3,
+    sellingStack: 3,
     contents: {
       head1:
         "Rebuild A Healthy And Strong Joint Like You Had In Your 30s Again",
@@ -240,6 +333,9 @@ export const staticProducts = [
     discount: 29,
     qtn: 1,
     colorTheme: "#BD0005",
+    topProduct: 12,
+    allProduct: 4,
+    sellingStack: 4,
     contents: {
       head1: "Rebuild A Healthy Life. Get Rid Of High Sugar Levels",
       text1: [
@@ -321,6 +417,9 @@ export const staticProducts = [
     price: "49,500.00",
     discount: 29,
     qtn: 1,
+    topProduct: 9,
+    allProduct: 5,
+    sellingStack: 2,
     contents: {
       head1: "Reach Your Peak Of Sexual Pleasure & Confidence",
       text1: [
@@ -391,7 +490,6 @@ export const staticProducts = [
       ],
     },
   },
-
   {
     id: 15,
     img: arj1,
@@ -404,6 +502,9 @@ export const staticProducts = [
     discount: 29,
     qtn: 1,
     colorTheme: "#B17E05",
+    topProduct: 8,
+    allProduct: 6,
+    sellingStack: 1,
     contents: {
       head1: "Reverse Even The Most Stubborn Hypertension Naturally",
       text1: [
@@ -470,90 +571,6 @@ export const staticProducts = [
       ],
     },
   },
-
-  {
-    id: 17,
-    img: productImg20,
-    title: "PROSTOPAN",
-    description: "Prostate Health Formula",
-    author: "Muscleblaze",
-    star: 4.5,
-    reviews: 568,
-    formerPrice: "50,000.00",
-    price: "22,500.00",
-    discount: 29,
-    qtn: 1,
-    contents: {
-      head1:
-        "Rebuild A Healthy And Strong Joint Like You Had In Your 30s Again",
-      text1: [
-        "Prostopan contains a nettle root extract that helps increase the formation of urine, clear the impurities from fat, blood and muscles, clean the glands and re-establish the intelligence of the glands so that they can return to their normal size, and maintain regular prostate functions",
-      ],
-      head2:
-        "ENABLES THE FREE FLOW OF URINE. COOLING THE MEMBRANES OF THE URINARY TRACT.",
-      text2: [
-        "“​Today, many people use Prostopan to treat urinary problems during the early stages of an enlarged prostate”",
-        "Prostopan relieves problems in urination owing to swelling of the prostate. Its natural extracts treat chronic urinary infection and urinary electrolyte excretion.",
-        "Nettle root extract, one of the active ingredients, contains compounds that bind to sex hormone binding globulin, leading to increased levels of free testosterone for improved sexual health, performance, and easier muscle building.",
-      ],
-      head3: "PROMOTE HEALTHY PROSTATE HEALTH",
-      listType: "✓",
-      list1: [
-        "Fight Tumors And Suppress Pain.",
-        "Helps The Free Flow Of Urine By Cooling And Soothing The Membranes Of The Urinary Tract.",
-        "Breaks Up The Large Renal And Ureteric Stones Into Small Particles And Then Flushes Out",
-        " No Side Effects. No Harms To The Kidneys Or Other Vital Organs",
-      ],
-      pricingTable: [
-        {
-          id: 1,
-          image: pros1,
-          price: "22,500.00",
-          prevPrice: "50,000.00",
-          plan: "One Month Plan",
-          saved: "Save 45%",
-        },
-        {
-          id: 3,
-          image: pros6,
-          price: "74,500.00",
-          prevPrice: "137,970.00",
-          plan: "6 Months Super Pack",
-          saved: "Save 54%",
-          most: "MOST POPULAR",
-        },
-        {
-          id: 2,
-          image: pros2,
-          price: "53,500.00",
-          prevPrice: "104,900.00",
-          plan: "3 Bottles of Prostopan",
-          saved: "Save 51%",
-        },
-      ],
-      reviewsImg: "",
-      testimonies: [
-        {
-          name: "Mrs. Francisca",
-          title: "This is amazing!",
-          description:
-            "I got my knee damaged after an accident some years ago and I have been on painkillers, balms, creams, and knee support. The pains were getting more intense by the day. Then, I heard about Boscure & Boniac. I got it and tried it, and I must say this is the first time I've experienced true relief in my years of struggle. There are no headaches, flare-ups or any side effects. It’s amazing. ",
-        },
-        {
-          name: "Kunle Ore",
-          title: "I felt relief after all these years!",
-          description:
-            "This product has changed my life. I can walk for a mile without even thinking about the pain. I no longer dread waking up to pain because it's not there anymore. Even my doctor asked me to share what I’m using with him. You won’t regret this too.",
-        },
-        {
-          name: "Tamira Kazim",
-          title: "Get it too!",
-          description:
-            "I can now sit for hours without getting knee stiff and pains. I have tried lots of supplements to heal and take away the pain but never really gotten the results I was looking for. It was very difficult to walk. Going up and down the stairs was almost impossible because of the pains. After just three weeks of Boscure & Boniac, the pain has greatly reduced and I walk around much easier.",
-        },
-      ],
-    },
-  },
   {
     id: 13,
     img: productImg13,
@@ -567,9 +584,12 @@ export const staticProducts = [
     discount: 29,
     qtn: 1,
     colorTheme: "#B17E05",
+    bottle1: true,
+    topProduct: 2,
+    allProduct: 7,
     contents: {
       head1:
-        "Rebuild A Healthy And Strong Joint Like You Had In Your 30s Again",
+        "Restore Fertility, Relieve Pains And Fibroids, Boost Healthy Living",
       text1: [
         "Fertivitz contains ashoka bark extract, which helps with uterine fibroids and other internal fibroids, dysmenorrhea, menstrual disorders, cysts, fibroids, irregular menstrual cycles, and other reproductive disorders. Fertivitz balances hormones as well as providing nourishment and strength to the uterus thereby also boosting fertility.s",
       ],
@@ -652,6 +672,9 @@ export const staticProducts = [
     discount: 29,
     qtn: 1,
     colorTheme: "#B17E05",
+    bottle1: true,
+    topProduct: 1,
+    allProduct: 8,
     contents: {
       head1: "BUILD A HEALTHY HEART. GET RID OF HYPERTENSION COMPLETELY",
       text1: [
@@ -738,6 +761,9 @@ export const staticProducts = [
     price: "23,500.00",
     discount: 29,
     qtn: 1,
+    bottle1: true,
+    topProduct: 4,
+    allProduct: 9,
     contents: {
       head1: "BUILD A HEALTHY LIFE WITHOUT DEALING WITH HYPERTENSION",
       text1: [
@@ -818,6 +844,9 @@ export const staticProducts = [
     discount: 29,
     qtn: 1,
     shortpage: true,
+    bottle1: true,
+    topProduct: 6,
+    allProduct: 10,
     contents: {
       head2:
         "REVERSE YOUR HIGH BLOOD PRESSURE AND GET YOUR HEART WORKING PERFECTLY",
@@ -849,6 +878,9 @@ export const staticProducts = [
     discount: 29,
     qtn: 1,
     shortpage: true,
+    bottle1: true,
+    topProduct: 7,
+    allProduct: 11,
     contents: {
       head2: "Helps In Effective Regulation Of Glucose (Sugar) In The Blood",
       text2: [
@@ -872,6 +904,9 @@ export const staticProducts = [
     discount: 29,
     qtn: 1,
     shortpage: true,
+    bottle1: true,
+    topProduct: 11,
+    allProduct: 12,
     contents: {
       head2: "REGULATE BLOOD CIRCULATION AND PROMOTE HEALTHY HEART",
       text2: [
@@ -890,7 +925,6 @@ export const staticProducts = [
       ],
     },
   },
-
   {
     id: 16,
     img: productImg19,
@@ -904,6 +938,9 @@ export const staticProducts = [
     discount: 29,
     qtn: 1,
     shortpage: true,
+    bottle1: true,
+    topProduct: 13,
+    allProduct: 13,
     contents: {
       head2: "Regulate Blood Sugar Levels In The Body Naturally",
       text2: [

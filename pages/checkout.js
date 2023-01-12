@@ -34,7 +34,6 @@ const Checkout = () => {
   const { cart } = useContext(productContext);
 
   const cleanPrice = (price) => {
-    console.log(price, "prrrrr");
     if (price) {
       return Number(price.split(".")[0].split(",").join(""));
     }
@@ -42,20 +41,19 @@ const Checkout = () => {
 
   const total = () => {
     if (cart.length > 1) {
-      let res = cart.reduce((a, b) => {
-        console.log(
-          cleanPrice(a.selectedPrice),
-          cleanPrice(b.selectedPrice),
-          "res"
-        );
-        return cleanPrice(a.selectedPrice) + cleanPrice(b.selectedPrice);
+      let calc = 0;
+      cart.map((a) => {
+        calc += cleanPrice(a.selectedPrice);
       });
+      var res = String(calc)
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      return res;
     } else {
       return cart[0]?.selectedPrice;
     }
   };
 
-  total();
   const checkout = (e) => {
     e.preventDefault();
 
@@ -79,7 +77,7 @@ const Checkout = () => {
           <form className="lg:w-[60%] lg:border-[#e6e6e6]  lg:border lg:border-y-0  lg:border-r-[#e8e8e8] lg:border-l-0 lg:pr-10">
             <div className="flex flex-col gap-5 mt-5">
               <div>
-                <h2 className="text-md">contact information</h2>
+                <h2 className="text-md">Contact Information</h2>
               </div>
               <div className="input">
                 <label htmlFor="email"></label>
@@ -174,7 +172,7 @@ const Checkout = () => {
                 <div className="flex justify-between  text-sm">
                   <p className="text-sm">SubTotal</p>
                   <h3 className="mr-3 text-right text-gray-400">
-                    <b className="text-black ">#{total() || 0}</b>
+                    <b className="text-black ">₦{total() || 0}</b>
                   </h3>
                 </div>
                 <div className="flex text-md justify-between">
@@ -191,7 +189,7 @@ const Checkout = () => {
 
                 <h3 className="mr-3 text-right text-gray-400">
                   <span>NGN </span>
-                  <b className="text-black lg:text-3xl">#{total() || 0}</b>
+                  <b className="text-black lg:text-3xl">₦{total() || 0}</b>
                 </h3>
               </div>
             </div>
@@ -220,7 +218,7 @@ const Checkout = () => {
                     <p className=" text-sm"> {cart.title}</p>
                   </div>
                   <div className="text-sm">
-                    <p>{`#${cart.selectedPrice}`}</p>
+                    <p>{`₦${cart.selectedPrice}`}</p>
                   </div>
                 </div>
               ))}

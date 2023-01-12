@@ -37,11 +37,14 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-[#f5f5f5]">
+    <div className="bg-[#f5f5f5] main_wrapper">
+      <div className="sideNav">
+        <div className="contents">ds</div>
+      </div>
       <Meta />
       <Nav />
       <Main />
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 }
