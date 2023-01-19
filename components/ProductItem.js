@@ -70,9 +70,9 @@ const ProductItem = ({ product }) => {
           />
         </div>
       </Link>
-      <div className="py-5 px-3 rounded-md flex flex-col gap-1 text-center md:text-left md:w-[80%] mx-auto md:mt-[60px]">
+      <div className="py-5 px-3 rounded-md flex flex-col gap-1 text-center md:text-left md:w-[80%] mx-auto md:mt-[20px]">
         <p
-          className="text-base sm:text-xl text-[#757575] font-[15px] text-center md:text-left sm:h-[60px]md:h-[20px]"
+          className="text-base sm:text-xl text-[#757575] font-[15px] text-center md:text-left sm:h-[60px]md:h-[20px] mb-0"
           style={{ lineHeight: "1" }}
         >
           {product.title}

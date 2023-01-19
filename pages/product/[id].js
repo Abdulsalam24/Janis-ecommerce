@@ -91,7 +91,7 @@ const ProductItem = () => {
               className="w-[60%] md:w-[50%] mx-auto"
             />
           </div>
-          <div className="h flex flex-col w-full md:w-[50%] py-5 px-3">
+          <div className=" flex flex-col w-full md:w-[50%] py-5 px-3">
             <div className="hidden md:block">
               <p
                 className=" my-2 text-4xl md:text-[55px] font-semibold text-[#3C3C3C] leading-[40px] md:leading-[60px]"
@@ -105,7 +105,10 @@ const ProductItem = () => {
             </div>
             <div
               className="flex flex-col gap-2 p-6 pl-6 rounded-1 my-4 text-center"
-              style={{ boxShadow: "1px 1px 10px 1px rgba(119, 119, 119,0.3)" }}
+              style={{
+                boxShadow: "1px 1px 10px 1px rgba(119, 119, 119,0.3)",
+                borderRadius: "50px",
+              }}
             >
               <p className="">
                 <span className="text-4xl text-[#818191] md:text-[45px]">
@@ -127,6 +130,7 @@ const ProductItem = () => {
                       ? "bg-gray-500 hover:bg-gray-600"
                       : "bg-[#103CC0]"
                   } btn`}
+                  style={{ borderRadius: "30px" }}
                 >
                   <AiOutlineShoppingCart className="inline mb-1 mr-1" />
                   {!checkCart?.inCart ? "Add To Cart" : "change cart"}
@@ -146,17 +150,14 @@ const ProductItem = () => {
               ))}
           </div>
           <div
-            className={` text-[white] p-4 md:p-8 text-center`}
+            className={` p-2 md:p-2 text-center`}
             style={{
               borderTopLeftRadius: "30px",
               borderTopRightRadius: "30px",
-              background: product.colorTheme || "green",
+              // background: product.colorTheme || "green",
             }}
           >
-            <h2
-              // style={{ color: product?.colorTitle }}
-              className="my-6 text-2xl font-semibold"
-            >
+            <h2 className="my-0 text-2xl font-semibold">
               {product.contents?.head2}
             </h2>
           </div>
@@ -187,11 +188,13 @@ const ProductItem = () => {
                 <div
                   key={idx}
                   className="text-center bg-[#EFEFEF] md:flex-1 mb-8 md:mb-0"
-                  style={{ borderRadius: "20px" }}
+                  style={{
+                    borderRadius: "20px",
+                  }}
                 >
                   {item.most && (
                     <h2
-                      className={`bg-[#2fa1f4] text-[white] text-center py-4`}
+                      className={`bg-[#B31325] text-[white] text-center py-4`}
                       style={{
                         borderTopLeftRadius: "30px",
                         borderTopRightRadius: "30px",
@@ -249,6 +252,7 @@ const ProductItem = () => {
                               ? "bg-gray-500 hover:bg-gray-600"
                               : "bg-[#103CC0]"
                           } btn`}
+                          style={{ borderRadius: "30px" }}
                         >
                           <AiOutlineShoppingCart className="inline mb-1 mr-1" />
                           {!checkCart?.inCart ? "Add To Cart" : "change cart"}
@@ -309,6 +313,7 @@ const ProductItem = () => {
                       ? "bg-gray-500 hover:bg-gray-600"
                       : "bg-[#103CC0]"
                   } btn`}
+                  style={{ borderRadius: "30px" }}
                 >
                   <AiOutlineShoppingCart className="inline mb-1 mr-1" />
                   {!checkCart?.inCart ? "Add To Cart" : "change cart"}

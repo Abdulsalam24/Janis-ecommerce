@@ -64,7 +64,16 @@ body {
     width: 0px;
   }
   to {
-    width: 100%;
+    width: 70%;
+  }
+}
+
+@keyframes navEffectBb {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -74,33 +83,77 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 30;
-  /* animation: navEffect;
-  animation-delay: 1s;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  background-color: transparent;
+  z-index: 300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-y: hidden;
+  animation-name: navEffectBb;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
-  animation-duration: 1s;
-  animation-iteration-count: 1; */
-  border: 2px solid blue;
-  display: none;
-
+  animation-duration: 800ms;
+  animation-iteration-count: 1;
+  animation-delay: 300ms;
 }
-.sideNav .contents {
-  position: fixed;
+
+/* html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+} */
+
+.sideNav .area {
+  animation: navEffect;
+  animation-delay: 0s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 600ms;
+  animation-iteration-count: 1;
   width: 0%;
   height: 100%;
-  animation: navEffect;
-  animation-delay: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  /* border: 2px solid red;
-  background-color: red;
-  z-index: 35; */
-
+  background-color: white;
+  overflow-x: hidden;
 }
+.sideNav .area div {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0;
+  font-size: 16px;
+  color: #161d48;
+  padding-top: 30px;
+}
+.sideNav .area div li {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 5px 0;
+  width: 350px;
+}
+.noNav {
+  display: none;
+}
+.sideNav .area div li span {
+  display: inline-block;
+  padding: 10px;
+}
+.sideNav .area div li span:hover {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+.sideNav .area div p {
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.sideNav .exit {
+  width: 30%;
+  height: 100%;
+  /* background-color: yellow; */
+}
+
 .sideActive {
 }
 
@@ -113,6 +166,7 @@ button {
 }
 p {
   color: #333333;
+  margin: 0;
 }
 
 a {
@@ -135,15 +189,22 @@ section {
 .nav_contents {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  gap: 30px;
+  /* width: 50%; */
 }
 .nav_contents li {
   list-style-type: none;
   font-size: 19px;
-  font-weight: 600;
-  color: #000;
+  font-weight: 400;
+  color: #161d48;
   cursor: pointer;
   border-bottom: 3px solid white;
+  text-shadow: 1px 1px #161d48;
+}
+.nav_contents li a {
+  /* border: 2px solid red; */
+  text-decoration: none;
+  color: #161d48;
 }
 .nav_contents li:hover {
   /* text-decoration: underline; */
@@ -203,6 +264,20 @@ section {
 }
 .contents_wrap p {
   margin: 20px 0;
+}
+.input_wrap {
+  margin-top: 20px;
+  text-align: left;
+}
+.input_wrap input {
+  display: block;
+  width: 100%;
+  border: 1px solid #909090;
+  padding: 7px 10px;
+}
+.input_wrap label {
+  font-size: 14px;
+  color: #909090;
 }
 
 .footer .list {

@@ -10,7 +10,9 @@ export const ProductContextProvider = ({ children }) => {
   const [product, setProduct] = useState({});
   const [cart, setCart] = useState([]);
   const [sortBy, setsortBy] = useState("");
+  const [issOpen, setissOpen] = useState(false);
 
+  console.log(issOpen, "issOpen");
   const addToCart = (price, plan, img) => {
     const exist = cart?.find((x) => x.id === product.id);
     if (exist) {
@@ -92,6 +94,8 @@ export const ProductContextProvider = ({ children }) => {
         getProduct,
         sorProduct,
         sortBy,
+        issOpen,
+        setissOpen,
       }}
     >
       {children}

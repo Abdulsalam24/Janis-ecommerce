@@ -7,29 +7,46 @@ import { convertString } from "./ProductItem";
 import Link from "next/link";
 import productContext from "../context/productContext";
 import logo from "../assets/img/Janis.png";
+import Router from "next/router";
 
 const Nav = () => {
   const [viewCart, setViewCart] = useState(false);
 
-  const { cart, setCart, sorProduct } = useContext(productContext);
+  const { cart, setCart, sorProduct, issOpen, setissOpen } =
+    useContext(productContext);
 
-  const handleTopProduct = () => {
-    sorProduct("topProduct");
+  const cleanPrice = (price) => {
+    if (price) {
+      return Number(price.split(".")[0].split(",").join(""));
+    }
   };
-  const handleAllProduct = () => {
-    sorProduct("allProduct");
+  const total = () => {
+    if (cart.length > 1) {
+      let calc = 0;
+      cart.map((a) => {
+        calc += cleanPrice(a.selectedPrice);
+      });
+      var res = String(calc)
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      return res;
+    } else {
+      return cart[0]?.selectedPrice;
+    }
   };
-
-  const handleBestStack = () => {
-    sorProduct("sellingStack");
-  };
-  const total = cart?.map((x) => x.price * x.qtn);
 
   const handleDelete = (id) => {
     const filterCart = cart.filter((x) => x.id !== id);
     setCart(filterCart);
   };
+  const handleOpen = () => {
+    setissOpen(!issOpen);
+  };
 
+  const handleSort = (val) => {
+    Router.push("/all-product");
+    sorProduct(val);
+  };
   return (
     <nav
       className="w-full bg-white shadow-md fixed top-0"
@@ -38,7 +55,7 @@ const Nav = () => {
       <div className="relative w-[90%] mx-auto flex justify-between max-w-[1300px] z-5">
         <div className="w-full py-6 flex justify-between items-center">
           <div className="menu_wrap">
-            <div className="menu">
+            <div className="menu" onClick={handleOpen}>
               <span></span>
               <span></span>
               <span></span>
@@ -57,9 +74,16 @@ const Nav = () => {
           </div>
 
           <div className="nav_contents">
-            <li onClick={handleAllProduct}>VIEW ALL PRODUCTS</li>
-            <li onClick={handleTopProduct}>TOP PRODUCTS</li>
-            <li onClick={handleBestStack}>BEST SELLING STACK</li>
+            <li onClick={() => handleSort("allProduct")}>VIEW ALL PRODUCTS</li>
+            <li onClick={() => handleSort("topProduct")}>TOP PRODUCTS</li>
+            <li onClick={() => handleSort("sellingStack")}>
+              BEST SELLING STACK
+            </li>
+            <li>
+              <span>
+                <Link href="/account"> MY ACCOUNT</Link>
+              </span>
+            </li>
           </div>
           <div className="flex flex-1 items-center justify-end gap-3 md:w-[10%]">
             <div
@@ -100,11 +124,9 @@ const Nav = () => {
 
                       <div className="flex-1 text-sm">
                         <p>{cart.title}</p>
-
                         <p>
-                          {`${convertString(cart.price)} * ${cart.qtn}`} {"="}{" "}
                           <b className="text-black">
-                            {`#${convertString(cart.price * cart.qtn)}`}
+                            {convertString(cart.price)}
                           </b>
                         </p>
                       </div>
@@ -119,13 +141,7 @@ const Nav = () => {
                   </div>
                 ))}
                 <h3 className="mr-3 text-right text-gray-400">
-                  Total :{" "}
-                  <b className="text-black ">
-                    #
-                    {total.length > 0
-                      ? convertString(total.reduce((a, b) => a + b))
-                      : 0}
-                  </b>
+                  Total : <b className="text-black ">₦{total() || 0}</b>
                 </h3>
               </>
             ) : (

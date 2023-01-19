@@ -50,6 +50,14 @@ import card3 from "../assets/img/card3.png";
 import B11 from "../assets/img/Bo.png";
 import Cardio from "../assets/img/Cardio 3.png";
 
+import lasuna from "../assets/img/lasuna.png";
+import alpha from "../assets/img/alpha.png";
+import bloodsugar from "../assets/img/bloodsugar.png";
+import diabcare from "../assets/img/diabcare.png";
+import boniac1000 from "../assets/img/boniac1000.png";
+import bonesupport from "../assets/img/bonesupport.png";
+import powerultral from "../assets/img/powerultral.png";
+
 export const staticProducts = [
   {
     id: 1,
@@ -864,7 +872,6 @@ export const staticProducts = [
       ],
     },
   },
-
   {
     id: 6,
     img: productImg6,
@@ -953,6 +960,617 @@ export const staticProducts = [
         " Reverse Diabetes",
         "Lose Weight, And Look Younger",
         "No Side Effects. 100% Natural Ingredients",
+      ],
+    },
+  },
+
+  {
+    id: 20,
+    img: lasuna,
+    title: "LASUNA DS",
+    description: "Healthy Heart Supplement",
+    star: 4.5,
+    reviews: 568,
+    formerPrice: "110,000.00",
+    price: "49,500.00",
+    discount: 29,
+    qtn: 1,
+    colorTheme: "#B17E05",
+    topProduct: 20,
+    allProduct: 20,
+    bottle1: true,
+    contents: {
+      head1: "Reverse Even The Most Stubborn Hypertension Naturally",
+      text1: [
+        "Arjuna & Lasuna are made from natural herbs that reverses high blood pressure, supports normal blood pressure, helps relieve chronic stress, improves mood and brain function. ",
+        "Ayurvedic Medicine is a major extract in Arjuna & Lasuna. Its extracts is found mostly in Indian, and it completely reverses even the most acute form hypertension",
+      ],
+      head2: "BUILD BETTER HEALTH WITHOUT FEAR OF GIVING IN TO HYPERTENSION",
+      text2: [
+        "“Say Goodbye to hypertension and high blood pressure completely! Enough of the suffering and pain, enough of the fear of sudden death. It’s time to enjoy life to the fullest.”",
+        "Arjuna and Lasuna, the magical twins from the ancient medical world of India.",
+        "Himalaya Arjuna contains herbal extracts from the bark of Arjuna. The extracts of Arjuna are effective in the treatment of cardiovascular ailments, treating asthma, controlling hypertension, and preventing kidney stones. Rich in antioxidant properties, the Himalaya Arjuna promotes blood circulation and heals wounds.",
+        "Lasuna, on the other hand, contains Lasuna (Allium sativum) bulb extract. Lasuna lowers blood lipid levels by modulating key enzymes in the liver responsible for cholesterol biosynthesis.",
+        "It also helps prevent the hardening of blood vessels by reducing lipid accumulation in the arteries. They call this “The Cholesterol Destroyer”.",
+      ],
+      head3:
+        "LIVE LIFE ON YOUR OWN TERMS WITHOUT WORRYING ABOUT RISING BLOOD PRESSURE",
+      listType: "✓",
+      list1: [
+        "Get Rid Of Constant Body Weakness",
+        "Reverse Even The Most Acute Hypertension",
+        "Get Stable Blood Pressure Reading And Avoid The Risk Of Stroke and Heart Attack",
+      ],
+      pricingTable: [
+        {
+          id: 1,
+          image: arjunlas,
+          price: "49,550.00",
+          prevPrice: "110,000.00",
+          plan: "One Month Plan",
+          saved: "Save 45%",
+        },
+        {
+          id: 3,
+          image: arjuna6,
+          price: "149,500.00",
+          prevPrice: "276,850.00",
+          plan: "6 Months Super Pack",
+          saved: "Save 54%",
+          most: "MOST POPULAR",
+        },
+        {
+          id: 2,
+          image: arjunlas3,
+          price: "79,500.00",
+          prevPrice: "155,880.00",
+          plan: "3 Bottles of Arjuna-Lasuna",
+          saved: "Save 51%",
+        },
+      ],
+      reviewsImg: "",
+      testimonies: [
+        {
+          name: "Tony Ugo",
+          title: "I’m glad I found this!",
+          description:
+            "I’m grateful I found this product. I was at the point of giving up on my rising blood pressure level when  Arjuna-Lasuna came to the rescue. I can say I’m totally free now.",
+        },
+        {
+          name: "Ope Ayeola",
+          title: "This is it!",
+          description:
+            "After I got the news of my hypertension from my doctor, I thought all hope was lost until I found this natural formula. It was all like a miracle to me.",
+        },
+      ],
+    },
+  },
+  {
+    id: 21,
+    img: alpha,
+    title: "ALPHA ENFORCER",
+    description: "Maximum Sexual Performance",
+    star: 4.5,
+    reviews: 568,
+    formerPrice: "110,550.00",
+    price: "49,500.00",
+    discount: 29,
+    qtn: 1,
+    topProduct: 21,
+    allProduct: 21,
+    bottle1: true,
+
+    contents: {
+      head1: "Reach Your Peak Of Sexual Pleasure & Confidence",
+      text1: [
+        "M- Power Ultra & Alpha Enforcer gives you maximum pleasure and intensified orgasms, increase in sex drive and energy, sparks up your stamina and staying power, and gives fuller and lasting erections.",
+      ],
+      head2: "INTENSE SEXUAL PERFORMANCE AND INCREASED STAMINA",
+      text2: [
+        "“​Your partner needs to be loved properly. You need to completely dominate the bedroom or else you open them up to other temptations”",
+        "End 2 minutes action permanently with M- Power Ultra & Alpha Enforcer.",
+        "M- Power Ultra & Alpha Enforcer are made from natural extracts that boost up the nitric oxide in the body which pumps enough blood to the penis, and give it fuller erections and sexual stamina.",
+        "They make the penis the automatic sex machine God created it to be.",
+        "They make you the man in the bedroom, and give long lasting ejaculations.",
+      ],
+      head3: "SPICE UP YOUR BEDROOM GAME WITH YOUR PARTNER",
+      listType: "✓",
+      list1: [
+        "End Weak Erection. Get bigger and long lasting erection",
+        "Increase Sexual Stamina And Performance Take control of your bedroom game, and say goodbye to 1- 2 minutes action.",
+        "Maximum Pleasure And Intense Orgasms Reach the peak you can reach in your sexual life.",
+      ],
+      pricingTable: [
+        {
+          id: 1,
+          image: mpower,
+          price: "49,550.00",
+          prevPrice: "110,000.00",
+          plan: "One Month Plan",
+          saved: "Save 45%",
+        },
+        {
+          id: 3,
+          image: ultra6,
+          price: "149,500.00",
+          prevPrice: "276,850.00",
+          plan: "6 Months Super Pack",
+          saved: "Save 54%",
+          most: "MOST POPULAR",
+        },
+        {
+          id: 2,
+          image: ultra3,
+          price: "79,500.00",
+          prevPrice: "155,880.00",
+          plan: "3 Bottles of M-Power Ultra & Alpha Enforcer",
+          saved: "Save 51%",
+        },
+      ],
+      reviewsImg: "",
+      testimonies: [
+        {
+          name: "Uchenna John",
+          title: "I highly recommend this!",
+          description:
+            "M- Power Ultra & Alpha Enforcer gave my marriage the spice it really needed. Just last year, I couldn’t fulfill my wife's sexual desires, now, I can say that we don't leave the bedroom without getting tired.",
+        },
+        {
+          name: "Tunji Kazim",
+          title: "I no longer struggle!",
+          description:
+            "This product is amazing. I didn't previously last long, but after using M- Power Ultra & Alpha Enforcer, I stay more than 5 minutes now. I’m glad",
+        },
+        {
+          name: "Tamira Kazim",
+          title: "This is great!",
+          description:
+            "At first, I thought this was one of those products where they promise everywhere and nothing works, but I was shocked to find out that my bedroom life is now very active. I had weak ejaculation and that affected my marriage badly. Now, my wife can’t wait for me to get back home after work.",
+        },
+      ],
+    },
+  },
+  {
+    id: 22,
+    img: bloodsugar,
+    title: "BLOOD SUGAR NORMILIZER",
+    description: "Advanced Sugar Destroyer",
+    author: "Muscleblaze",
+    star: 4.5,
+    reviews: 568,
+    formerPrice: "110,000.00",
+    price: "49,500.00",
+    discount: 29,
+    qtn: 1,
+    colorTheme: "#BD0005",
+    topProduct: 22,
+    allProduct: 22,
+    bottle1: true,
+    contents: {
+      head1: "Rebuild A Healthy Life. Get Rid Of High Sugar Levels",
+      text1: [
+        "Diabetes 2-in-1 is a combination of Blood Sugar Normalizer and DiabeCare, two leading natural remedies to high blood sugar, that jump starts your pancreas, the organ that keeps your blood sugar level normal, and reverses diabetes naturally.",
+      ],
+      head2: "A SECOND CHANCE TO REVERSE DIABETES. BOOST THE BODY AGAIN.",
+      text2: [
+        "“​Unfortunately, few people know that Type 2 diabetes increases the risk of having heart attack, stroke, kidney failure, amputated limbs and even sight loss...”",
+        "Diabetes not managed properly can lead to sudden heart attack, high cholesterol, developing neuropathy, and possible amputation of limbs.",
+        "Blood Sugar Normalizer & DiabeCare can reverse high blood sugar and act to restore the elasticity of affected capillaries.",
+        "They contain natural ingredients that helps the body’s pancreatic beta cells to work properly and produce enough insulin",
+      ],
+      head3: "COMPLETE HIGH BLOOD SUGAR REVERSAL. 100% NATURAL INGREDIENTS",
+      listType: "✓",
+      list1: [
+        "Reverse Diabetes: Diabetes 2-in1  is really a breakthrough product that has helped lots of men and women  reverse Type 2 diabetes easily",
+        "Losing weight: This product contains 8 essential antioxidants that boost the work action of the pancreas, improves insulin resistance and in turn reverse Type 2 Diabetes.",
+        "Looking younger, and Having better sex than you’ve had in years",
+        " No Side Effects: Leave no side effects like kidney damage, liver or heart disease those painkillers you usually take do.",
+      ],
+      pricingTable: [
+        {
+          id: 1,
+          image: diacare1,
+          price: "49,550.00",
+          prevPrice: "110,000.00",
+          plan: "One Month Plan",
+          saved: "Save 45%",
+        },
+        {
+          id: 3,
+          image: diacare6,
+          price: "149,500.00",
+          prevPrice: "276,850.00",
+          plan: "6 Months Super Pack",
+          saved: "Save 54%",
+          most: "MOST POPULAR",
+        },
+        {
+          id: 2,
+          image: diacare2,
+          price: "79,500.00",
+          prevPrice: "155,880.00",
+          plan: "3 Bottles of Diabetes 2-in-1",
+          saved: "Save 51%",
+        },
+      ],
+      reviewsImg: "",
+      testimonies: [
+        {
+          name: "Loveth Mmesoma",
+          title: "The best for me!",
+          description:
+            "This product is without doubt the best product I have used. I am a testimony that there are still genuine natural alternatives out there. I wish many more people will start using natural methods like this.",
+        },
+        {
+          name: "Best Ayeola",
+          title: "My story changed!",
+          description:
+            "When I was diagnosed with Type 2 diabetes, things just kept getting worse. I mean I'm 42, and I could not sleep with my wife. That, for me, was a serious disgrace. It was like a dream come through when I started using Diabetes 2-in-1. My sugar level is under check now. And I satisfy my wife without any trouble now.",
+        },
+        {
+          name: "Jude Gozie",
+          title: "My friend needs it too!",
+          description:
+            "I can't begin to imagine the impact this Diabetes 2-in-1 has had on me. My blood sugar is now at a normal level after using it for three months. Also, I'm recommending my friend to use it too.",
+        },
+      ],
+    },
+  },
+  {
+    id: 23,
+    img: diabcare,
+    title: "DIABECARE DC",
+    description: "Advanced Sugar Destroyer",
+    author: "Muscleblaze",
+    star: 4.5,
+    reviews: 568,
+    formerPrice: "110,000.00",
+    price: "49,500.00",
+    discount: 29,
+    qtn: 1,
+    colorTheme: "#BD0005",
+    topProduct: 23,
+    allProduct: 23,
+    bottle1: true,
+    contents: {
+      head1: "Rebuild A Healthy Life. Get Rid Of High Sugar Levels",
+      text1: [
+        "Diabetes 2-in-1 is a combination of Blood Sugar Normalizer and DiabeCare, two leading natural remedies to high blood sugar, that jump starts your pancreas, the organ that keeps your blood sugar level normal, and reverses diabetes naturally.",
+      ],
+      head2: "A SECOND CHANCE TO REVERSE DIABETES. BOOST THE BODY AGAIN.",
+      text2: [
+        "“​Unfortunately, few people know that Type 2 diabetes increases the risk of having heart attack, stroke, kidney failure, amputated limbs and even sight loss...”",
+        "Diabetes not managed properly can lead to sudden heart attack, high cholesterol, developing neuropathy, and possible amputation of limbs.",
+        "Blood Sugar Normalizer & DiabeCare can reverse high blood sugar and act to restore the elasticity of affected capillaries.",
+        "They contain natural ingredients that helps the body’s pancreatic beta cells to work properly and produce enough insulin",
+      ],
+      head3: "COMPLETE HIGH BLOOD SUGAR REVERSAL. 100% NATURAL INGREDIENTS",
+      listType: "✓",
+      list1: [
+        "Reverse Diabetes: Diabetes 2-in1  is really a breakthrough product that has helped lots of men and women  reverse Type 2 diabetes easily",
+        "Losing weight: This product contains 8 essential antioxidants that boost the work action of the pancreas, improves insulin resistance and in turn reverse Type 2 Diabetes.",
+        "Looking younger, and Having better sex than you’ve had in years",
+        " No Side Effects: Leave no side effects like kidney damage, liver or heart disease those painkillers you usually take do.",
+      ],
+      pricingTable: [
+        {
+          id: 1,
+          image: diacare1,
+          price: "49,550.00",
+          prevPrice: "110,000.00",
+          plan: "One Month Plan",
+          saved: "Save 45%",
+        },
+        {
+          id: 3,
+          image: diacare6,
+          price: "149,500.00",
+          prevPrice: "276,850.00",
+          plan: "6 Months Super Pack",
+          saved: "Save 54%",
+          most: "MOST POPULAR",
+        },
+        {
+          id: 2,
+          image: diacare2,
+          price: "79,500.00",
+          prevPrice: "155,880.00",
+          plan: "3 Bottles of Diabetes 2-in-1",
+          saved: "Save 51%",
+        },
+      ],
+      reviewsImg: "",
+      testimonies: [
+        {
+          name: "Loveth Mmesoma",
+          title: "The best for me!",
+          description:
+            "This product is without doubt the best product I have used. I am a testimony that there are still genuine natural alternatives out there. I wish many more people will start using natural methods like this.",
+        },
+        {
+          name: "Best Ayeola",
+          title: "My story changed!",
+          description:
+            "When I was diagnosed with Type 2 diabetes, things just kept getting worse. I mean I'm 42, and I could not sleep with my wife. That, for me, was a serious disgrace. It was like a dream come through when I started using Diabetes 2-in-1. My sugar level is under check now. And I satisfy my wife without any trouble now.",
+        },
+        {
+          name: "Jude Gozie",
+          title: "My friend needs it too!",
+          description:
+            "I can't begin to imagine the impact this Diabetes 2-in-1 has had on me. My blood sugar is now at a normal level after using it for three months. Also, I'm recommending my friend to use it too.",
+        },
+      ],
+    },
+  },
+  {
+    id: 24,
+    img: boniac1000,
+    // imgdouble: true,
+    title: "BONIAC 1000",
+    description: "Ultimate Bone Support Formula",
+    author: "Muscleblaze",
+    star: 4.5,
+    reviews: 568,
+    formerPrice: "110,000.00",
+    price: "49,500.00",
+    discount: 29,
+    qtn: 1,
+    colorTitle: "#103CC0",
+    colorDesc: "#860002",
+    colorList: "#FC8608",
+    colorTheme: "#103CC0",
+    topProduct: 24,
+    allProduct: 24,
+    bottle1: true,
+
+    contents: {
+      head1:
+        "Rebuild A Healthy And Strong Joint Like You Had In Your 30s Again",
+      text1: [
+        "Boscure & Boniac contains natural phytonutrients that can unlock those stiffened joints with ease so you can start sleeping well at night and go about your day with unbeatable energy. Boscure is like bread and Boniac is like butter but for your joints. They work hand in hand to help you erase years of torture from arthritis.",
+      ],
+      head2: "INSTANT SOOTHING RELIEF FROM ALL SORTS OF CHRONIC JOINT PAINS",
+      text2: [
+        "“Numerous scientific research backs up the fact that Boswellia, a small flora that grows in an ancient part of India, contains phytonutrients that can reduce stiffness, pains and swellings of all kinds of arthritis.”",
+        "One Important Ingredient for Boscure & Boniac is Boswellia.",
+        "Boswellia is a spice that grows mostly in Asia and some parts of Africa. The extract of Boswellia has been used for centuries in Asia and African medicines. Studies have shown that Boswellia helps with all kinds of arthritis including osteoarthritis and rheumatoid arthritis which are the leading two in the world today.",
+        "Boswellia helps unlock years of stiffened joints in only a few uses, also the results are instant and long-lasting too according to several clinical trials.",
+        "Boswellia works like a painkiller but now the pain disappears, not for some hours but, almost forever.",
+      ],
+      head3:
+        "PAIN-FREE JOINTS IN JUST 3 MONTHS. IT JUST TAKES LESS THAN 10 MINUTES EACH DAY",
+      listType: "✓",
+      list1: [
+        "Rebuild A Healthy And Strong Joint Like You Had In Your 30s Again Boscure goes inside your body and stops those inflammatory proteins from attacking your synovial fluid which is your joint's life support and it also helps your body to regrow new healthy cartilages and stop that pain forever.",
+        "Boniac is a  cream you massage into your affected joints. It starts from the outside, reduces the swelling of those joints and helps you stop the constant flare-ups. Boniac contains natural phytonutrients that can unlock those stiffened joints with ease.",
+        "No Replacement Surgery. Ends Nagging Pains And Joints Swellings Boscure and Boniac are guaranteed to completely restore perfectly new and pain-free joints in just 3 months.They target the root cause of arthritis, turn off the body's pain switch and help to rebuild a healthy and strong joint.",
+        " No Side Effects Leave no side effects like kidney damage, liver or heart disease those painkillers you usually take do.",
+      ],
+      pricingTable: [
+        {
+          id: 1,
+          image: productImg9,
+          price: "49,500.00",
+          prevPrice: "110,000.00",
+          plan: "One Month Plan",
+          saved: "(Save 45%)",
+        },
+        {
+          id: 3,
+          image: bo3,
+          price: "149,500.00",
+          prevPrice: "276,850.00",
+          plan: "6 Months Super Pack",
+          saved: "(Save 54%)",
+          most: "MOST POPULAR",
+        },
+        {
+          id: 2,
+          image: bo2,
+          price: "79,500.00",
+          prevPrice: "155,880.00",
+          plan: "3 Bottles of Boscure-Boniac",
+          saved: "(Save 51%)",
+        },
+      ],
+      reviewsImg: "",
+      testimonies: [
+        {
+          name: "Mrs. Francisca",
+          title: "This is amazing!",
+          description:
+            "I got my knee damaged after an accident some years ago and I have been on painkillers, balms, creams, and knee support. The pains were getting more intense by the day. Then, I heard about Boscure & Boniac. I got it and tried it, and I must say this is the first time I've experienced true relief in my years of struggle. There are no headaches, flare-ups or any side effects. It’s amazing.",
+        },
+        {
+          name: "Kunle Ore",
+          title: "I felt relief after all these years!",
+          description:
+            "This product has changed my life. I can walk for a mile without even thinking about the pain. I no longer dread waking up to pain because it's not there anymore. Even my doctor asked me to share what I’m using with him. You won’t regret this too.",
+        },
+        {
+          name: "Tamira Kazim",
+          title: "Get it too!",
+          description:
+            "I can now sit for hours without getting knee stiff and pains. I have tried lots of supplements to heal and take away the pain but never really gotten the results I was looking for. It was very difficult to walk. Going up and down the stairs was almost impossible because of the pains. After just three weeks of Boscure & Boniac, the pain has greatly reduced and I walk around much easier.",
+        },
+      ],
+    },
+  },
+  {
+    id: 25,
+    img: powerultral,
+    title: "N-POWER ULTRAL",
+    description: "Maximum Sexual Performance",
+    star: 4.5,
+    reviews: 568,
+    formerPrice: "110,550.00",
+    price: "49,500.00",
+    discount: 29,
+    qtn: 1,
+    topProduct: 25,
+    allProduct: 25,
+    bottle1: true,
+
+    contents: {
+      head1: "Reach Your Peak Of Sexual Pleasure & Confidence",
+      text1: [
+        "M- Power Ultra & Alpha Enforcer gives you maximum pleasure and intensified orgasms, increase in sex drive and energy, sparks up your stamina and staying power, and gives fuller and lasting erections.",
+      ],
+      head2: "INTENSE SEXUAL PERFORMANCE AND INCREASED STAMINA",
+      text2: [
+        "“​Your partner needs to be loved properly. You need to completely dominate the bedroom or else you open them up to other temptations”",
+        "End 2 minutes action permanently with M- Power Ultra & Alpha Enforcer.",
+        "M- Power Ultra & Alpha Enforcer are made from natural extracts that boost up the nitric oxide in the body which pumps enough blood to the penis, and give it fuller erections and sexual stamina.",
+        "They make the penis the automatic sex machine God created it to be.",
+        "They make you the man in the bedroom, and give long lasting ejaculations.",
+      ],
+      head3: "SPICE UP YOUR BEDROOM GAME WITH YOUR PARTNER",
+      listType: "✓",
+      list1: [
+        "End Weak Erection. Get bigger and long lasting erection",
+        "Increase Sexual Stamina And Performance Take control of your bedroom game, and say goodbye to 1- 2 minutes action.",
+        "Maximum Pleasure And Intense Orgasms Reach the peak you can reach in your sexual life.",
+      ],
+      pricingTable: [
+        {
+          id: 1,
+          image: mpower,
+          price: "49,550.00",
+          prevPrice: "110,000.00",
+          plan: "One Month Plan",
+          saved: "Save 45%",
+        },
+        {
+          id: 3,
+          image: ultra6,
+          price: "149,500.00",
+          prevPrice: "276,850.00",
+          plan: "6 Months Super Pack",
+          saved: "Save 54%",
+          most: "MOST POPULAR",
+        },
+        {
+          id: 2,
+          image: ultra3,
+          price: "79,500.00",
+          prevPrice: "155,880.00",
+          plan: "3 Bottles of M-Power Ultra & Alpha Enforcer",
+          saved: "Save 51%",
+        },
+      ],
+      reviewsImg: "",
+      testimonies: [
+        {
+          name: "Uchenna John",
+          title: "I highly recommend this!",
+          description:
+            "M- Power Ultra & Alpha Enforcer gave my marriage the spice it really needed. Just last year, I couldn’t fulfill my wife's sexual desires, now, I can say that we don't leave the bedroom without getting tired.",
+        },
+        {
+          name: "Tunji Kazim",
+          title: "I no longer struggle!",
+          description:
+            "This product is amazing. I didn't previously last long, but after using M- Power Ultra & Alpha Enforcer, I stay more than 5 minutes now. I’m glad",
+        },
+        {
+          name: "Tamira Kazim",
+          title: "This is great!",
+          description:
+            "At first, I thought this was one of those products where they promise everywhere and nothing works, but I was shocked to find out that my bedroom life is now very active. I had weak ejaculation and that affected my marriage badly. Now, my wife can’t wait for me to get back home after work.",
+        },
+      ],
+    },
+  },
+  {
+    id: 26,
+    img: bonesupport,
+    title: "BOSCURE",
+    description: "Ultimate Bone Support Formula",
+    author: "Muscleblaze",
+    star: 4.5,
+    reviews: 568,
+    formerPrice: "110,000.00",
+    price: "49,500.00",
+    discount: 29,
+    qtn: 1,
+    colorTitle: "#103CC0",
+    colorDesc: "#860002",
+    colorList: "#FC8608",
+    colorTheme: "#103CC0",
+    topProduct: 26,
+    allProduct: 26,
+    bottle1: true,
+
+    contents: {
+      head1:
+        "Rebuild A Healthy And Strong Joint Like You Had In Your 30s Again",
+      text1: [
+        "Boscure & Boniac contains natural phytonutrients that can unlock those stiffened joints with ease so you can start sleeping well at night and go about your day with unbeatable energy. Boscure is like bread and Boniac is like butter but for your joints. They work hand in hand to help you erase years of torture from arthritis.",
+      ],
+      head2: "INSTANT SOOTHING RELIEF FROM ALL SORTS OF CHRONIC JOINT PAINS",
+      text2: [
+        "“Numerous scientific research backs up the fact that Boswellia, a small flora that grows in an ancient part of India, contains phytonutrients that can reduce stiffness, pains and swellings of all kinds of arthritis.”",
+        "One Important Ingredient for Boscure & Boniac is Boswellia.",
+        "Boswellia is a spice that grows mostly in Asia and some parts of Africa. The extract of Boswellia has been used for centuries in Asia and African medicines. Studies have shown that Boswellia helps with all kinds of arthritis including osteoarthritis and rheumatoid arthritis which are the leading two in the world today.",
+        "Boswellia helps unlock years of stiffened joints in only a few uses, also the results are instant and long-lasting too according to several clinical trials.",
+        "Boswellia works like a painkiller but now the pain disappears, not for some hours but, almost forever.",
+      ],
+      head3:
+        "PAIN-FREE JOINTS IN JUST 3 MONTHS. IT JUST TAKES LESS THAN 10 MINUTES EACH DAY",
+      listType: "✓",
+      list1: [
+        "Rebuild A Healthy And Strong Joint Like You Had In Your 30s Again Boscure goes inside your body and stops those inflammatory proteins from attacking your synovial fluid which is your joint's life support and it also helps your body to regrow new healthy cartilages and stop that pain forever.",
+        "Boniac is a  cream you massage into your affected joints. It starts from the outside, reduces the swelling of those joints and helps you stop the constant flare-ups. Boniac contains natural phytonutrients that can unlock those stiffened joints with ease.",
+        "No Replacement Surgery. Ends Nagging Pains And Joints Swellings Boscure and Boniac are guaranteed to completely restore perfectly new and pain-free joints in just 3 months.They target the root cause of arthritis, turn off the body's pain switch and help to rebuild a healthy and strong joint.",
+        " No Side Effects Leave no side effects like kidney damage, liver or heart disease those painkillers you usually take do.",
+      ],
+      pricingTable: [
+        {
+          id: 1,
+          image: productImg9,
+          price: "49,500.00",
+          prevPrice: "110,000.00",
+          plan: "One Month Plan",
+          saved: "(Save 45%)",
+        },
+        {
+          id: 3,
+          image: bo3,
+          price: "149,500.00",
+          prevPrice: "276,850.00",
+          plan: "6 Months Super Pack",
+          saved: "(Save 54%)",
+          most: "MOST POPULAR",
+        },
+        {
+          id: 2,
+          image: bo2,
+          price: "79,500.00",
+          prevPrice: "155,880.00",
+          plan: "3 Bottles of Boscure-Boniac",
+          saved: "(Save 51%)",
+        },
+      ],
+      reviewsImg: "",
+      testimonies: [
+        {
+          name: "Mrs. Francisca",
+          title: "This is amazing!",
+          description:
+            "I got my knee damaged after an accident some years ago and I have been on painkillers, balms, creams, and knee support. The pains were getting more intense by the day. Then, I heard about Boscure & Boniac. I got it and tried it, and I must say this is the first time I've experienced true relief in my years of struggle. There are no headaches, flare-ups or any side effects. It’s amazing.",
+        },
+        {
+          name: "Kunle Ore",
+          title: "I felt relief after all these years!",
+          description:
+            "This product has changed my life. I can walk for a mile without even thinking about the pain. I no longer dread waking up to pain because it's not there anymore. Even my doctor asked me to share what I’m using with him. You won’t regret this too.",
+        },
+        {
+          name: "Tamira Kazim",
+          title: "Get it too!",
+          description:
+            "I can now sit for hours without getting knee stiff and pains. I have tried lots of supplements to heal and take away the pain but never really gotten the results I was looking for. It was very difficult to walk. Going up and down the stairs was almost impossible because of the pains. After just three weeks of Boscure & Boniac, the pain has greatly reduced and I walk around much easier.",
+        },
       ],
     },
   },
